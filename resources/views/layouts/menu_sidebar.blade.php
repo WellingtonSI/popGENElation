@@ -33,10 +33,19 @@
                     Home
                 </p>
             </a>
-        </li>
+         </li>
+         <li class="nav-item">
+            <a href="/equilibrio" class="nav-link">
+                <i class="nav-icon fas fa-project-diagram"></i>
+                <p>
+                     Equilíbrio de </br>Hardy-Weinberg
+                </p>
+            </a>
+         </li>
+           
            
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
            <a href="{{ url('/logout') }}"  class="nav-link" onclick="event.preventDefault();
                 document.getElementById('logout-form').submit();">
                     <i class="nav-icon fa fa-power-off"></i>  
@@ -48,7 +57,7 @@
                 {{ csrf_field() }}
                 <input type="submit" value="logout" style="display: none;">
             </form>
-          </li>
+          </li> -->
 
 
         </ul>

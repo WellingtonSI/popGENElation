@@ -13,7 +13,7 @@
         <div class="content-wrapper">
         @yield('conteudo')
         </div>
-        @include('layouts.footer')
+        <!-- @include('layouts.footer') -->
     </div>
     
 

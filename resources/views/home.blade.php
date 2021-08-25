@@ -17,7 +17,6 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/home">Home</a></li>
-              <button type="button" class="btn btn-block btn-outline-primary btn-sm">Primary</button>
             </ol>
           </div>
         </div>
