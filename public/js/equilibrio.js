@@ -1,4 +1,4 @@
-var Chart = require('../plugins/chart/chart.js');
+
 var ctx = document.getElementById('myChart');
 var myChart = new Chart(ctx, {
     type: 'bar',
@@ -34,3 +34,17 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+
+Quantidade_AA= $('#AA').val();
+Quantidade_Aa= $('#Aa').val();
+Quantidade_aa= $('#aa').val();
+
+total=Quantidade_AA+Quantidade_Aa+Quantidade_aa;
+
+Frequencia_AA=Quantidade_AA/total;
+Frequencia_Aa=Quantidade_Aa/total;
+Frequencia_aa=Quantidade_aa/total;
+
+p = (Frequencia_AA+Frequencia_Aa/2);
+q = (Frequencia_aa+Frequencia_Aa/2);

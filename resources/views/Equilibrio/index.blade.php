@@ -50,7 +50,7 @@ Hardy-Weinbergme')
                                 <div class="form-group col-md-6 mt-5">
                                     <div class="form-group col-md-12">
                                         <strong>Quantidade de genótipos AA<span style="color: red;">*</span></strong>
-                                        <input type="number" autocomplete="off" name="AA" class="form-control @error('AA') is-invalid @enderror" value="{{ old('AA') }}">
+                                        <input type="number" autocomplete="off" name="AA" id="AA" class="form-control @error('AA') is-invalid @enderror" value="{{ old('AA') }}">
                                         @error('AA')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -59,7 +59,7 @@ Hardy-Weinbergme')
                                     </div>
                                     <div class="form-group col-md-12">
                                         <strong>Quantidade de genótipos Aa<span style="color: red;">*</span></strong>
-                                        <input type="number" autocomplete="off" name="Aa" class="form-control @error('Aa') is-invalid @enderror" value="{{ old('Aa') }}">
+                                        <input type="number" autocomplete="off" name="Aa" id="Aa" class="form-control @error('Aa') is-invalid @enderror" value="{{ old('Aa') }}">
                                         @error('nascimento')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -68,7 +68,7 @@ Hardy-Weinbergme')
                                     </div>
                                     <div class="form-group col-md-12">
                                         <strong>Quantidade de genótipos aa<span style="color: red;">*</span></strong>
-                                        <input type="number" autocomplete="off" name="aa" class="form-control @error('aa') is-invalid @enderror" value="{{ old('aa') }}">
+                                        <input type="number" autocomplete="off" name="aa" id="aa" class="form-control @error('aa') is-invalid @enderror" value="{{ old('aa') }}">
                                         @error('nascimento')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -110,8 +110,23 @@ Hardy-Weinbergme')
     $(document).on('click', '.btnaddCalcular', function () {
         	
         $("#interno" ).remove();
-        p.push(Math.random());
-        q.push(Math.random());
+        Quantidade_AA = parseFloat($('#AA').val());
+        Quantidade_Aa = parseFloat($('#Aa').val());
+        Quantidade_aa = parseFloat($('#aa').val());
+
+        total=Quantidade_AA+Quantidade_Aa+Quantidade_aa;
+
+        Frequencia_AA=Quantidade_AA/total;
+        Frequencia_Aa=Quantidade_Aa/total;
+        Frequencia_aa=Quantidade_aa/total;
+
+        
+            p.push(Frequencia_AA+Frequencia_Aa/2);
+            q.push(Frequencia_aa+Frequencia_Aa/2);
+
+            // p.push(Math.random());
+            // q.push(Math.random());
+ 
 
         $.get('equilibrio/atualizar', function(data) {
             // console.log(yValues);
