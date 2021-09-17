@@ -35,30 +35,34 @@
             </a>
          </li>
          <li class="nav-item">
-            <a href="/equilibrio" class="nav-link">
-                <i class="nav-icon fas fa-project-diagram"></i>
+            <a href="#" class="nav-link">
+              
                 <p>
-                     Equilíbrio de </br>Hardy-Weinberg
+                  <i class="fas fa-balance-scale"></i>
+                     Equilíbrio de </br>
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     Hardy-Weinberg
                 </p>
             </a>
-         </li>
-           
-           
-
-          <!-- <li class="nav-item">
-           <a href="{{ url('/logout') }}"  class="nav-link" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">
-                    <i class="nav-icon fa fa-power-off"></i>  
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/equilibrio/por-geracao" class="nav-link">
+                &nbsp;&nbsp;&nbsp;<i class="fas fa-leaf"></i>
                     <p>
-                        Sair da Conta
+                    Calculo por geração
                     </p>
-            </a>
-            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                {{ csrf_field() }}
-                <input type="submit" value="logout" style="display: none;">
-            </form>
-          </li> -->
-
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/equilibrio/todas-geracoes" class="nav-link">
+                &nbsp;&nbsp;&nbsp;<i class="fas fa-seedling"></i>
+                    <p>
+                      Calculo todas gerações
+                    </p>
+                </a>
+              </li>
+            </ul>
+         </li>
 
         </ul>
       </nav>

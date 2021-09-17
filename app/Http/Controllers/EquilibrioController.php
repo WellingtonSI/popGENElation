@@ -11,9 +11,9 @@ class EquilibrioController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('Equilibrio.index');
+    public function index(){
+
+      
     }
 
     /**
@@ -47,7 +47,7 @@ class EquilibrioController extends Controller
     {
         
     }
-    public function atualizar()
+    public function atualizar_mapa()
     {
         $div = '<div id="interno">
                     <h4 style="text-align: center"> Resultado</h4>
@@ -55,7 +55,14 @@ class EquilibrioController extends Controller
                 </div>';
         return $div;
     }
-
+    public function todas_geracoes()
+    {
+        return view('Equilibrio.todas_geracoes');
+    }
+    public function por_geracao()
+    {
+        return view('Equilibrio.por_geracao');
+    }
     /**
      * Show the form for editing the specified resource.
      *

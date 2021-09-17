@@ -20,18 +20,16 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-// Route::get('/equilibrio', function () {
-//     return view('Equilibrio.index');
-// });
 
 
-Route::get('/equilibrio/atualizar', ['uses' => 'EquilibrioController@atualizar']);
+Route::group(['prefix' => 'equilibrio'], function () {
+    Route::get('/atualizar-mapa', ['uses' => 'EquilibrioController@atualizar_mapa']);
+    Route::get('/todas-geracoes/atualizar-mapa', ['uses' => 'EquilibrioController@atualizar_mapa']);
+    Route::get('/todas-geracoes', ['uses' => 'EquilibrioController@todas_geracoes']);
+    Route::get('/por-geracao', ['uses' => 'EquilibrioController@por_geracao']);
+});
 
 Route::resource('equilibrio ', 'EquilibrioController');
 
-// Route::group(['prefix' => 'equilibrio'], function () {
-//     Route::get('/', ['uses' => 'EquilibrioController@index']);
-//     Route::get('/atualizar', ['uses' => 'EquilibrioController@atualizar']);
-// });
 
 
