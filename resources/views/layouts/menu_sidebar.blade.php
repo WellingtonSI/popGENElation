@@ -4,7 +4,7 @@
     <a href="/home" class="brand-link brand-link">
 
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="brand-text"><img src="" >Treinamento</span>
+      <span class="brand-text"><img src="" >Pop</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">

@@ -57,7 +57,7 @@ Hardy-Weinbergme')
                         <div class="container">
                             <div class="row">
                                 <div class="form-group col-md-3 mt-5">
-                                    <strong>Geração(ões) - por padrão é 20</strong>
+                                    <strong>Geração(ões) - Uma ou mais</strong>
                                     <select type="text" title="Quantidade de geração(ões)" autocomplete="off" name="geracao" id="geracao" class="form-control select2 @error('geracao') is-invalid @enderror">
                                     @for ($geracao = 1; $geracao<=20;$geracao++)
                                             <option   {{ (old("geracao") ==  $geracao ? "selected":"") }}>{{$geracao}}</option>
@@ -134,7 +134,7 @@ Hardy-Weinbergme')
 <script src="{{ asset('js/chart.js') }}"></script>
 <script>
     var geracoes = 0;
-    var limite_geracoes = 20;
+    var limite_geracoes = 1;
     var xValues = new Array(); 
     var p = new Array();
     var q = new Array();
@@ -165,14 +165,21 @@ Hardy-Weinbergme')
             p.push(Frequencia_AA+Frequencia_Aa/2);
             q.push(Frequencia_aa+Frequencia_Aa/2);
 
-
-            if(Quantidade_AA && Quantidade_Aa && Quantidade_aa  && limite_geracoes<=20){
+            // console.log(geracoes);
+            if(Quantidade_AA && Quantidade_Aa && Quantidade_aa && geracoes<limite_geracoes){
                 geracoes++;
                 document.getElementById("geracoes").innerHTML = "<p id='conteudo'>Quantidade de gerações: "+geracoes+"</p>";
                 $('.callout3').removeClass('hidden'); 
-            }else if(geracoes==limite_geracoes){
+                $("#AA").val("");
+                $("#Aa").val("");
+                $("#aa").val("");
+            }else if(geracoes>=limite_geracoes || geracoes>=20){
+                geracoes++;
                 document.getElementById("error").innerHTML = "<strong id='erro'><p  style='color: red;' >Quantidade de gerações chegou ao máximo!</p></strong>";
                 $('.callout3').removeClass('hidden');
+                $("#AA").val("");
+                $("#Aa").val("");
+                $("#aa").val("");
             }else{
                 if (!Quantidade_AA) {
                     $('.callout3').find("p").append(" - Preencha o campo de genótipos AA </br>");
@@ -185,7 +192,8 @@ Hardy-Weinbergme')
                 }
             }
  
-        if(geracoes==limite_geracoes){
+        if(geracoes==limite_geracoes && geracoes<limite_geracoes+1){
+            console.log(geracoes);
             console.log(limite_geracoes);
             $("#interno" ).remove();
             $.get('/equilibrio/todas-geracoes/atualizar-mapa', function(data) {
@@ -198,8 +206,8 @@ Hardy-Weinbergme')
                     data: {
                         labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
                         datasets: [{
-                            label: 'Q',
-                            data: q,
+                            label: 'p',
+                            data: p,
                             // backgroundColor: [  
                             //     'rgba(255, 99, 132, 0.2)',
                             //     'rgba(54, 162, 235, 0.2)',
@@ -218,8 +226,8 @@ Hardy-Weinbergme')
                             ],
                             borderWidth: 1
                         },{
-                            label: 'P',
-                            data: p,
+                            label: 'q',
+                            data: q,
                             // backgroundColor: [  
                             //     'rgba(255, 99, 132, 0.2)',
                             //     'rgba(54, 162, 235, 0.2)',
@@ -249,6 +257,7 @@ Hardy-Weinbergme')
                 });
             });
         }  
+
         
        
     });
@@ -258,7 +267,7 @@ Hardy-Weinbergme')
         type: 'line',
         data: {
             datasets: [{
-                label: 'Q',
+                label: 'p',
                 // backgroundColor: [  
                 //     'rgba(255, 99, 132, 0.2)',
                 //     'rgba(54, 162, 235, 0.2)',
@@ -278,7 +287,7 @@ Hardy-Weinbergme')
                 borderWidth: 1
             
             }, {
-                label: 'P',
+                label: 'q',
                 // backgroundColor: [  
                 //     'rgba(255, 99, 132, 0.2)',
                 //     'rgba(54, 162, 235, 0.2)',
