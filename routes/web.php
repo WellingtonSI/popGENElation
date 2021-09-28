@@ -30,6 +30,7 @@ Route::group(['prefix' => 'equilibrio'], function () {
 });
 
 Route::resource('equilibrio ', 'EquilibrioController');
+Route::resource('sexo', 'SexoController');
 
 
 

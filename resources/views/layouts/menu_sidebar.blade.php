@@ -63,7 +63,15 @@
               </li>
             </ul>
          </li>
-
+         <li class="nav-item">
+            
+            <a href="/sexo" class="nav-link">
+            <i class="fas fa-transgender"></i>
+              <p>
+                Alelos Ligados ao Sexo
+              <p>
+            </a>
+         </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
