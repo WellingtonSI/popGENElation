@@ -36,7 +36,17 @@ class SexoController extends Controller
     {
         //
     }
+    public function atualizar_mapa(Request $request)
+    {
+     
+        $div = "<div id='".$request->id_div."'>
+                    <h5 style='text-align: center'>".$request->titulo."</h5>
+                    <canvas id='".$request->id_canvas."' width='100' height='100'></canvas>
+                </div>";
 
+
+        return $div;
+    }
     /**
      * Display the specified resource.
      *

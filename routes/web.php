@@ -28,6 +28,7 @@ Route::group(['prefix' => 'equilibrio'], function () {
     Route::get('/todas-geracoes', ['uses' => 'EquilibrioController@todas_geracoes']);
     Route::get('/por-geracao', ['uses' => 'EquilibrioController@por_geracao']);
 });
+Route::get('sexo/atualizar-mapa', ['uses' => 'SexoController@atualizar_mapa']);
 
 Route::resource('equilibrio ', 'EquilibrioController');
 Route::resource('sexo', 'SexoController');
