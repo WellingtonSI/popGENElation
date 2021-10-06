@@ -38,7 +38,17 @@
             <div class="card">
                 <div class="card-header">
                     (<span style="color: red;">*</span>) Campos Obrigatórios
+                    <hr>
+                    <span><strong> pm</strong> - alelo dominante do macho | </span>
+                    <span><strong>pf</strong> - alelo dominante da fêmea | </span>
+                    <span><strong>qm</strong> - alelo recessivo do macho | </span>
+                    <span><strong>qf</strong> - alelo recessivo da fêmea | </span>
+                    <span><strong>p</strong> - alelo dominante da população | </span>
+                    <span><strong>q</strong> - alelo recessivo da população | </span>
+                    <span><strong>d(p)</strong> =  pf - pm | </span>
+                    <span><strong>d(q)</strong> =  qf - qm</span>
 
+                    
                 </div>
                 @if (Session::has('message'))
                 <div class="alert alert-danger alert-dismissible">
@@ -263,12 +273,19 @@
                                     ],
                                     borderWidth: 1 
                                 },{
-                                    label: 'qm',
-                                    data: qm,
+                                    label: 'pf',
+                                    data: pf,
                                     backgroundColor: [  
                                         'rgba(250, 0, 0, 0.8)'
                                     ],
                                     borderWidth: 1
+                                },{
+                                    label: 'd(p)',
+                                    data: dp,
+                                    backgroundColor: [  
+                                    'rgba(0, 0, 0, 1)'
+                                    ],
+
                                 }]
                                 },
                             options: {
@@ -300,8 +317,8 @@
                             data: {
                                 labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
                                 datasets: [{
-                                    label: 'pf',
-                                    data: pf,
+                                    label: 'qm',
+                                    data: qm,
                                     backgroundColor: [  
                                         'rgba(0, 0, 255, 0.5)'
                                     ],
@@ -313,7 +330,14 @@
                                         'rgba(250, 0, 0, 0.5)'
                                     ],
                                     borderWidth: 1
-                                }]
+                                },{
+                                    label: 'd(q)',
+                                    data: dq,
+                                    backgroundColor: [  
+                                    'rgba(0, 0, 0, 0.5)'
+                                    ],
+
+                                }   ]
                                 },
                             options: {
                                 scales: {
@@ -356,20 +380,6 @@
                                         'rgba(255, 159, 64, 1)'
                                     ],
                                     borderWidth: 1
-                                },{
-                                    label: 'd(p)',
-                                    data: dp,
-                                    backgroundColor: [  
-                                    'rgba(0, 0, 0, 1)'
-                                    ],
-
-                                },{
-                                    label: 'd(q)',
-                                    data: dq,
-                                    backgroundColor: [  
-                                    'rgba(0, 0, 0, 0.5)'
-                                    ],
-
                                 }]
 
                                 },
@@ -405,7 +415,13 @@
                 'rgba(255, 0, 0, 0.8)',
                  ],
 
-                }]
+                },{
+                label: 'd(p)',
+                backgroundColor: [  
+                'rgba(0, 0, 0, 1)'
+                 ],
+
+            }]
         },
         options: {
             scales: {
@@ -420,17 +436,25 @@
         var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            datasets: [{
+            datasets: [
+            {
                 label: 'qm',
                 backgroundColor: [  
                     'rgba(0, 0, 255, 0.5)'
                 ],
-                borderWidth: 1 
-            }, {
+            },
+            {
                 label: 'qf',
                 backgroundColor: [  
                     'rgba(255, 0, 0, 0.5)'
                 ],
+                borderWidth: 1 
+            },{
+                label: 'd(q)',
+                backgroundColor: [  
+                'rgba(0, 0, 0, 0.5)'
+                 ],
+
             }]
         },
         options: {
@@ -457,18 +481,6 @@
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1
-            },{
-                label: 'd(p)',
-                backgroundColor: [  
-                'rgba(0, 0, 0, 1)'
-                 ],
-
-            },{
-                label: 'd(q)',
-                backgroundColor: [  
-                'rgba(0, 0, 0, 0.5)'
-                 ],
-
             }]
         },
         options: {
