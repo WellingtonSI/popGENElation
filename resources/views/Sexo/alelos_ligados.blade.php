@@ -158,17 +158,18 @@
 <script src="{{ asset('js/equilibrio.js') }}" type="modulo"></script> 
 <script src="{{ asset('js/chart.js') }}"></script>
 <script>
+    console.log(parseFloat(0.75 - 0.725));
     var geracoes = 0;
     var limite_geracoes = 20;
     var xValues = new Array(); 
-    var p = new Array();
-    var q = new Array();
-    var pm = new Array();
-    var qm = new Array();
-    var pf = new Array();
-    var qf = new Array();
-    var dp = new Array();
-    var dq = new Array();
+    let p = new Array();
+    let q = new Array();
+    let pm = new Array();
+    let qm = new Array();
+    let pf = new Array();
+    let qf = new Array();
+    let dp = new Array();
+    let dq = new Array();
     // $(document).on('click', '.btnDefinir', function () {
     //     limite_geracoes = document.getElementById("geracao").value;
     //     $("#geracao").prop('disabled',true);
@@ -176,7 +177,7 @@
     // });
 
     $(document).on('click', '.btnaddCalcular', function () {
-
+        
         $('.callout3').removeClass('hidden');
         $('.callout3').addClass('hidden'); //oculta a div para erros successivos
         $('.callout3').find('p').text(""); //limpa a div para erros successivos
@@ -210,10 +211,11 @@
             p.push(FrequenciaMacho_A/3 + (2*((FrequenciaFemea_AA+(0.5*FrequenciaFemea_Aa))/3)));
             q.push(FrequenciaMacho_a/3 + (2*((FrequenciaFemea_aa+(0.5*FrequenciaFemea_Aa))/3)));
 
+            console.log(pf[geracoes]-pm[geracoes],pf[geracoes],pm[geracoes],pf.length);
             dp.push(pf[geracoes]-pm[geracoes]);
             dq.push(qf[geracoes]-qm[geracoes]);
-
-            console.log(pm,qm,pf,qf,p,q);
+            geracoes++;
+            console.log(pm,pf,qm,qf,p,q,dp,dq);
             // if(Quantidade_AA && Quantidade_Aa && Quantidade_aa && geracoes<limite_geracoes){
             //     geracoes++;
             //     document.getElementById("geracoes").innerHTML = "<p id='conteudo'>Quantidade de gerações: "+geracoes+"</p>";
