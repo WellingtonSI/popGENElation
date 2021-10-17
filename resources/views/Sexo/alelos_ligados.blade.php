@@ -214,36 +214,45 @@
             console.log(pf[geracoes]-pm[geracoes],pf[geracoes],pm[geracoes],pf.length);
             dp.push(pf[geracoes]-pm[geracoes]);
             dq.push(qf[geracoes]-qm[geracoes]);
-            geracoes++;
-            console.log(pm,pf,qm,qf,p,q,dp,dq);
-            // if(Quantidade_AA && Quantidade_Aa && Quantidade_aa && geracoes<limite_geracoes){
-            //     geracoes++;
-            //     document.getElementById("geracoes").innerHTML = "<p id='conteudo'>Quantidade de gerações: "+geracoes+"</p>";
-            //     $('.callout3').removeClass('hidden'); 
-            //     $("#AA").val("");
-            //     $("#Aa").val("");
-            //     $("#aa").val("");
-            // }else if(geracoes>=limite_geracoes || geracoes>=20){
-            //     geracoes++;
-            //     document.getElementById("error").innerHTML = "<strong id='erro'><p  style='color: red;' >Quantidade de gerações chegou ao máximo!</p></strong>";
-            //     $('.callout3').removeClass('hidden');
-            //     $("#AA").val("");
-            //     $("#Aa").val("");
-            //     $("#aa").val("");
-            // }else{
-            //     if (!Quantidade_AA) {
-            //         $('.callout3').find("p").append(" - Preencha o campo de genótipos AA </br>");
-            //     }
-            //     if (!Quantidade_Aa) {
-            //         $('.callout3').find("p").append(" - Preencha o campo de genótipos Aa </br>");
-            //     }
-            //     if (!Quantidade_aa) {
-            //         $('.callout3').find("p").append(" - Preencha o campo de genótipos aa </br>");
-            //     }
-            // }
+
+            if(QuantidadeFemea_AA && QuantidadeFemea_Aa && QuantidadeFemea_aa && geracoes<limite_geracoes && QuantidadeMacho_A && QuantidadeMacho_a){
+                geracoes++;
+                document.getElementById("geracoes").innerHTML = "<p id='conteudo'>Quantidade de gerações: "+geracoes+"</p>";
+                $('.callout3').removeClass('hidden'); 
+                $("#macho_A").val("");
+                $("#macho_a").val("");
+                $("#femea_AA").val("");
+                $("#femea_Aa").val("");
+                $("#femea_aa").val("");
+            }else if(geracoes>=limite_geracoes || geracoes>=20){
+                geracoes++;
+                document.getElementById("error").innerHTML = "<strong id='erro'><p  style='color: red;' >Quantidade de gerações chegou ao máximo!</p></strong>";
+                $('.callout3').removeClass('hidden');
+                $("#macho_A").val("");
+                $("#macho_a").val("");
+                $("#femea_AA").val("");
+                $("#femea_Aa").val("");
+                $("#femea_aa").val("");
+            }else{
+                if (!QuantidadeMacho_A) {
+                    $('.callout3').find("p").append(" - Preencha o campo de genótipos XA y </br>");
+                }
+                if (!QuantidadeMacho_a) {
+                    $('.callout3').find("p").append(" - Preencha o campo de genótipos Xa y </br>");
+                }
+                if (!QuantidadeFemea_AA) {
+                    $('.callout3').find("p").append(" - Preencha o campo de genótipos XA XA </br>");
+                }
+                if (!QuantidadeFemea_Aa) {
+                    $('.callout3').find("p").append(" - Preencha o campo de genótipos XA Xa </br>");
+                }
+                if (!QuantidadeFemea_aa) {
+                    $('.callout3').find("p").append(" - Preencha o campo de genótipos Xa Xa </br>");
+                }
+                
+            }
  
-        //if(geracoes==limite_geracoes && geracoes<limite_geracoes+1){
-            console.log(geracoes);
+        if(geracoes<=limite_geracoes){
             titleDominante = document.getElementsByTagName("h5")[2].innerHTML;
             titleRecessivo = document.getElementsByTagName("h5")[3].innerHTML+',internoRecessivo';
             titlePopulacional = document.getElementsByTagName("h5")[4].innerHTML+",internoPopulacional";
@@ -310,7 +319,7 @@
                     titulo: 'Frequência de Alelos Recessivos',
                     id_div: 'internoRecessivo',
                     id_canvas:'myChartFemea' ,
-                },
+                    },
                     success: function(data) {
                         $('#resultadoRecessivo').html(data);
                         var ctx = document.getElementById('myChartFemea');
@@ -360,7 +369,7 @@
                     titulo: 'Frequência de Alelos Populacionais',
                     id_div: 'internoPopulacional',
                     id_canvas:'myChartPopulacional' ,
-                },
+                    },
                     success: function(data) {
                         $('#resultadoPopulacional').html(data);
                         var ctx = document.getElementById('myChartPopulacional');
@@ -398,7 +407,7 @@
                     }
                 });
 
-       
+        } 
     });
 
     var ctx = document.getElementById('myChartMacho');
