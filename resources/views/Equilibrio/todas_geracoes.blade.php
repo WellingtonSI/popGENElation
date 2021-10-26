@@ -165,7 +165,7 @@ Hardy-Weinbergme')
             p.push(Frequencia_AA+Frequencia_Aa/2);
             q.push(Frequencia_aa+Frequencia_Aa/2);
 
-            // console.log(geracoes);
+            
             if(Quantidade_AA && Quantidade_Aa && Quantidade_aa && geracoes<limite_geracoes){
                 geracoes++;
                 document.getElementById("geracoes").innerHTML = "<p id='conteudo'>Quantidade de gerações: "+geracoes+"</p>";
