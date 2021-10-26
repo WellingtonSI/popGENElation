@@ -64,7 +64,7 @@
                         <div class="container"> 
                             
                               <div class="form-group col-md-12 mt-5" style="margin-top: 16px;">
-                                <h5>Macho</h5> 
+                                <h5>Frequência genotípica do macho</h5> 
                                     <div class="col-md-12" id="error">
                                     </div>
                                     </br>
@@ -82,7 +82,7 @@
 
                                 </div>
                                 <div class="form-group col-md-12 mt-5" style="margin-top: 16px;">
-                                 <h5>Fêmea</h5> 
+                                 <h5>Frequência genotípica da fêmea</h5> 
                                     <div class="col-md-12" id="error">
                                     </div>
                                     </br>

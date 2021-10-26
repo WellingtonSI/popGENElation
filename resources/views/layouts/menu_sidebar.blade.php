@@ -23,55 +23,65 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-header">MENU</li>
+                with font-awesome or any other icon font library -->
+            <li class="nav-header">MENU</li>
 
+            <li class="nav-item">
+              <a href="/home" class="nav-link">
+                  <i class="nav-icon fas fa-project-diagram"></i>
+                  <p>
+                      Home
+                  </p>
+              </a>
+          </li>
           <li class="nav-item">
-            <a href="/home" class="nav-link">
-                <i class="nav-icon fas fa-project-diagram"></i>
-                <p>
-                    Home
-                </p>
-            </a>
-         </li>
-         <li class="nav-item">
-            <a href="#" class="nav-link">
+              <a href="#" class="nav-link">
+                
+                  <p>
+                    <i class="fas fa-balance-scale"></i>
+                      Equilíbrio de </br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      Hardy-Weinberg
+                  </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/equilibrio/por-geracao" class="nav-link">
+                  &nbsp;&nbsp;&nbsp;<i class="fas fa-leaf"></i>
+                      <p>
+                      Calculo por geração
+                      </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/equilibrio/todas-geracoes" class="nav-link">
+                  &nbsp;&nbsp;&nbsp;<i class="fas fa-seedling"></i>
+                      <p>
+                        Calculo todas gerações
+                      </p>
+                  </a>
+                </li>
+              </ul>
+          </li>
+         
+          <li class="nav-item">
               
+              <a href="/sexo" class="nav-link">
+              <i class="fas fa-transgender"></i>
                 <p>
-                  <i class="fas fa-balance-scale"></i>
-                     Equilíbrio de </br>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                     Hardy-Weinberg
-                </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/equilibrio/por-geracao" class="nav-link">
-                &nbsp;&nbsp;&nbsp;<i class="fas fa-leaf"></i>
-                    <p>
-                    Calculo por geração
-                    </p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/equilibrio/todas-geracoes" class="nav-link">
-                &nbsp;&nbsp;&nbsp;<i class="fas fa-seedling"></i>
-                    <p>
-                      Calculo todas gerações
-                    </p>
-                </a>
-              </li>
-            </ul>
-         </li>
-         <li class="nav-item">
-            
-            <a href="/sexo" class="nav-link">
-            <i class="fas fa-transgender"></i>
-              <p>
-                Alelos Ligados ao Sexo
-              <p>
-            </a>
-         </li>
+                  Alelos Ligados ao Sexo
+                <p>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a href="/polialelia" class="nav-link">
+                <i class="fas fa-tint"></i>
+                <p>
+                  Polialelia
+                <p>
+              </a>
+          </li>
+         
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
