@@ -63,7 +63,6 @@
                 </li>
               </ul>
           </li>
-         
           <li class="nav-item">
               
               <a href="/sexo" class="nav-link">
@@ -72,7 +71,7 @@
                   Alelos Ligados ao Sexo
                 <p>
               </a>
-          </li>
+        
           <li class="nav-item">
               <a href="/polialelia" class="nav-link">
                 <i class="fas fa-tint"></i>

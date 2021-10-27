@@ -42,6 +42,9 @@
                     <!-- <form method="POST" action="/equilibrio" id="equilibrio" name="f1"> -->
 
                         <div class="container">
+                      
+                            <h4> Frequência genotípica</h4>
+ 
                             <div class="row">
 
                                 <div class="form-group col-md-6 mt-5">
