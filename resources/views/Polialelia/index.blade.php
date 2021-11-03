@@ -43,7 +43,7 @@
 
                         <div class="container">
                       
-                            <h4> Frequência genotípica</h4>
+                            <h4> Frequências genotípicas</h4>
  
                             <div class="row">
 
@@ -115,7 +115,7 @@
                                 </div>
                                 
                                 <div class="form-group col-md-6" style="position:relative;width:100px;height:250px;">
-                                    <h4 style="text-align: center"> Resultado</h4>
+                                    <h4 style="text-align: center"> Resultados</h4>
                                     <div id="resultado" ></div>
                                 </div>   
                             </div>
