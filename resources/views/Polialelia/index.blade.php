@@ -29,6 +29,7 @@
             <div class="card">
                 <div class="card-header">
                     (<span style="color: red;">*</span>) Campos Obrigatórios
+                    <button type="button" class="btn btn-primary float-right col-md-2 btnaddResultdos">Ver todos resultados</button>
 
                 </div>
                 @if (Session::has('message'))
@@ -41,7 +42,7 @@
                 <div class="card-body">
                     <!-- <form method="POST" action="/equilibrio" id="equilibrio" name="f1"> -->
 
-                        <div class="container">
+                        <div class="container" style="display: block;" >
                       
                             <h4> Frequências genotípicas</h4>
  
@@ -119,6 +120,9 @@
                                     <div id="resultado" ></div>
                                 </div>   
                             </div>
+                        </div>
+                        <div id="todos_resultados">
+                   
                         </div>
                 </div>
                      <!-- /.card-body -->
