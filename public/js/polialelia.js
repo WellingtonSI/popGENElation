@@ -6,21 +6,31 @@ $(document).ready(function($) {
     $(document).on('click', '.btnaddVoltar', function () {
 
         $('#todos_resultados').empty();
+        $('#resultado').empty();
 
-
-
+        A1A1 = parseFloat($('#A1A1').val(""));
+        A1A2 = parseFloat($('#A1A2').val(""));
+        A1A3 = parseFloat($('#A1A3').val(""));
+        A2A2 = parseFloat($('#A2A2').val(""));
+        A2A3 = parseFloat($('#A2A3').val(""));
+        A3A3 = parseFloat($('#A3A3').val(""));
+        $('.btn')[0].style.display="block";
+        $('.btn')[1].style.display="none";
+    
         $('.container')[0].style.display="block";
     });
     $(document).on('click', '.btnaddResultdos', function () {
         $('.container')[0].style.display="none";
+        $('.btn')[0].style.display="none";
+        $('.btn')[1].style.display="block";
 
-        function apresentacao(resultdo) {
+        function apresentacao(resultdo,index) {
 
             if(resultdo[7]==1){
-                $("#todos_resultados").append("</br></br></br><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='position:absolute;top:50%;left:49%;transform:translate(-50%,-50%);font-size:20px;color: green;'</br></br></br></br></br></br></br></br></br></br><strong>A polulação está em equilíbrio</strong></span>")
+                $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: green;'</br><strong>A polulação está em equilíbrio</strong></span></br>_____________________________________________</br>")
     
             }else{
-                $("#todos_resultados").append("</br></br></br><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='position:absolute;top:50%;left:42%;transform:translate(-50%,-50%);font-size:20px;color: red;'</br></br></br></br></br></br></br></br></br></br><strong>A polulação não está em equilíbrio</strong></span>")
+                $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: red;'</br><strong>A polulação não está em equilíbrio</strong></span></br>_____________________________________________</br>")
             }
             
         }
@@ -90,9 +100,15 @@ $(document).ready(function($) {
         //verificação se está em equilíbrio ou não
         if((p+q+r+pq+pr+qr).toFixed(2)==1){
 
+            if(geracoes==2){
+                $('.btn')[0].style.display="block";
+            }
             $("#resultado").append("<strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</p></strong><span id='span-polelia' style='position:absolute;top:50%;left:49%;transform:translate(-50%,-50%);font-size:20px;color: green;'</br></br></br></br></br></br></br></br></br></br><strong>A polulação está em equilíbrio</strong></span>")
 
         }else{
+            if(geracoes==2){
+                $('.btn')[0].style.display="block";
+            }
             $("#resultado").append("<strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</p></strong><span id='span-polelia' style='position:absolute;top:50%;left:42%;transform:translate(-50%,-50%);font-size:20px;color: red;'</br></br></br></br></br></br></br></br></br></br><strong>A polulação não está em equilíbrio</strong></span>")
         }
     
