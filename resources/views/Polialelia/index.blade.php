@@ -32,6 +32,10 @@
                     <button type="button" class="btn btn-primary float-right col-md-2 btnaddResultdos" style="display: none;">Ver todos resultados</button>
 
                     <button type="button" class="btn btn btn-info  float-right col-md-1 btnaddVoltar" style="display: none;">Voltar</button>
+                    </br>       
+                    <span>Para 3 alelos digite as frequências de cada genotípos</span>
+                    </br>  
+                    <span>Para para mais de 3 alelos, defina a quantidade de alelos e será mostrado o número de genótipos homozigotos e heterozigotos esperado</span>
 
                 </div>
                 @if (Session::has('message'))
@@ -43,9 +47,37 @@
                 @endif
                 <div class="card-body">
                         <div class="container" style="display: block;" >
-                      
+                            <div class="row">
+                                <div class="form-group col-md-3 mt-5">
+                                    <strong>Definir polialia com mais de 3 alelos</strong>
+                                    <select type="text" title="Quantidade de alelos" autocomplete="off" name="alelos" id="alelos" class="form-control select2 @error('alelos') is-invalid @enderror">
+                                    <option value=""   {{ (old("alelos") ==  "Selecione" ? "selected":"") }}>[Selecione]</option>
+                                    @for ($alelos = 4; $alelos<=20;$alelos++)
+                                            <option value={{$alelos}}  {{ (old("alelos") ==  $alelos ? "selected":"") }}>{{$alelos}} alelos</option>
+                                    @endfor    
+                                    </select>
+                                    @error('alelos')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="form-group col-md-2 mt-5">
+                                    </br>  
+                                    <button class="form-control btn-primary btnDefinir" >
+                                        Definir
+                                    </button> 
+                                </div>
+                                <div class="form-group col-md- mt-5">
+                                    </br>  
+                                    <button type="button" class="btn form-control btn-warning btnTresAlelos" style="display: none;" >
+                                       Voltar para 3 Alelos
+                                    </button> 
+                                </div>
+                            </div>  
+                            <hr> 
                             <h4> Frequências genotípicas</h4>
- 
+
                             <div class="row">
 
                                 <div class="form-group col-md-6 mt-5">

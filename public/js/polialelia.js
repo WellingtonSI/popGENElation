@@ -115,4 +115,41 @@ $(document).ready(function($) {
     
     });
 
+    $(document).on('click', '.btnDefinir', function () {
+        $("#frequencia-polelia").remove();
+         (document.querySelector("#A1A1")).disabled=true;
+         (document.querySelector("#A1A2")).disabled=true;
+        (document.querySelector("#A1A3")).disabled=true;
+        (document.querySelector("#A2A2")).disabled=true;
+         (document.querySelector("#A2A3")).disabled=true;
+         (document.querySelector("#A3A3")).disabled=true;
+         (document.querySelector(".btnaddCalcular")).disabled=true;;
+         $('.btn')[2].style.display="block";
+        
+         var alelos = parseFloat((document.querySelector("#alelos")).value);
+         
+         var total = ((alelos*(alelos+1))/2);
+         console.log(alelos+1);
+         var heterozigotos = ((alelos*(alelos-1))/2);
+         var porcentagem_homozigoto  = (alelos/total)*100;
+         var porcentagem_heterozigotos  = (heterozigotos/total)*100;
+
+
+
+         $("#resultado").append("<strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>Número de Genótipos = "+total+"</br>Genótipos Homozigotos = "+porcentagem_homozigoto.toFixed(2)+"%</br>Genótipos Heterozigotos = "+porcentagem_heterozigotos.toFixed(2)+"%</p></strong>")
+
+
+    });
+
+    $(document).on('click', '.btnTresAlelos', function () {
+        $("#frequencia-polelia").remove();
+        (document.querySelector("#A1A1")).disabled=false;
+        (document.querySelector("#A1A2")).disabled=false;
+       (document.querySelector("#A1A3")).disabled=false;
+       (document.querySelector("#A2A2")).disabled=false;
+        (document.querySelector("#A2A3")).disabled=false;
+        (document.querySelector("#A3A3")).disabled=false;
+        (document.querySelector(".btnaddCalcular")).disabled=false;;
+        $('.btn')[2].style.display="none";
+    });
 });
