@@ -47,35 +47,6 @@
                 @endif
                 <div class="card-body">
                         <div class="container" style="display: block;" >
-                            <div class="row">
-                                <div class="form-group col-md-3 mt-5">
-                                    <strong>Definir polialia com mais de 3 alelos</strong>
-                                    <select type="text" title="Quantidade de alelos" autocomplete="off" name="alelos" id="alelos" class="form-control select2 @error('alelos') is-invalid @enderror">
-                                    <option value=""   {{ (old("alelos") ==  "Selecione" ? "selected":"") }}>[Selecione]</option>
-                                    @for ($alelos = 4; $alelos<=20;$alelos++)
-                                            <option value={{$alelos}}  {{ (old("alelos") ==  $alelos ? "selected":"") }}>{{$alelos}} alelos</option>
-                                    @endfor    
-                                    </select>
-                                    @error('alelos')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
-                                </div>
-                                <div class="form-group col-md-2 mt-5">
-                                    </br>  
-                                    <button class="form-control btn-primary btnDefinir" >
-                                        Definir
-                                    </button> 
-                                </div>
-                                <div class="form-group col-md- mt-5">
-                                    </br>  
-                                    <button type="button" class="btn form-control btn-warning btnTresAlelos" style="display: none;" >
-                                       Voltar para 3 Alelos
-                                    </button> 
-                                </div>
-                            </div>  
-                            <hr> 
                             <h4> Frequências genotípicas</h4>
 
                             <div class="row">
@@ -149,18 +120,52 @@
                                 
                                 <div class="form-group col-md-6" style="position:relative;width:100px;height:250px;">
                                     <h4 style="text-align: center"> Resultados</h4>
-                                    <div id="resultado" ></div>
-                                </div>   
+                                    <div id="resultado" style='margin-left:30px' ></div>
+                                </div>
+                                
+                            <hr>
                             </div>
+                            <hr>
+                            <div class="row" >
+                                <div class=" col-md-4 mt-5">
+                                    <strong>Para casos com polialia acima de 3 alelos</strong>
+                                    <select type="text" title="Quantidade de alelos" autocomplete="off" name="alelos" id="alelos" class="form-control select2 @error('alelos') is-invalid @enderror">
+                                    <option value=""   {{ (old("alelos") ==  "Selecione" ? "selected":"") }}>[Selecione]</option>
+                                    @for ($alelos = 4; $alelos<=20;$alelos++)
+                                            <option value={{$alelos}}  {{ (old("alelos") ==  $alelos ? "selected":"") }}>{{$alelos}} alelos</option>
+                                    @endfor    
+                                    </select>
+                                    @error('alelos')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-1 mt-5">
+                                    </br>  
+                                    <button class="form-control btn-primary btnDefinir" >
+                                        Definir
+                                    </button> 
+                                </div>
+                                <!-- <div class="form-group col-md- mt-5">
+                                    </br>  
+                                    <button type="button" class="btn form-control btn-warning btnTresAlelos" style="display: none;" >
+                                       Voltar para 3 Alelos
+                                    </button> 
+                                </div> -->
+                                <div class=" col-md-6">
+                                    <h4 style="text-align: center"> Resultados</h4>
+                                    <div id="resultado_maisalelos" style='margin-left:30px'></div>
+                                </div>
+                            </div>  
                         </div>
-                        <div class="col-md-6" id="todos_resultados">
-                   
-                        </div>
-                </div>
-                     <!-- /.card-body -->
+                </div>   
+                <!-- /.card-body -->   
             </div>
-            <!-- /.card -->
+            <!-- /.card --> 
         </div>
+       
+    </div>
 </section 
 @endsection 
 @section('scripts_adicionais') 
