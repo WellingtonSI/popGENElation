@@ -25,7 +25,7 @@ $(document).ready(function($) {
         $('.btn')[1].style.display="block";
 
         function apresentacao(resultdo,index) {
-
+            console.log('entrou');
             if(resultdo[7]==1){
                 $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: green;'</br><strong>A polulação está em equilíbrio</strong></span></br>_____________________________________________</br>")
     
@@ -67,7 +67,7 @@ $(document).ready(function($) {
         $('#A3A3').val("")
 
 
-     console.log(A1A1,A1A2,A1A3,A2A2,A2A3,A3A3);
+    //  console.log(A1A1,A1A2,A1A3,A2A2,A2A3,A3A3);
         total = A1A1 + A1A2 + A1A3 + A2A2 + A2A3 + A3A3;
     
         p=Math.sqrt((A1A1/total));
@@ -78,8 +78,8 @@ $(document).ready(function($) {
         qr=2*q*r; 
         
         //1 72 83 15 52 50
-        console.log(p,q,r,p+q+r+pq+pr+qr);
-        console.log(parseFloat(p+q+r+pq+pr+qr).toFixed(2));
+        // console.log(p,q,r,p+q+r+pq+pr+qr);
+        // console.log(parseFloat(p+q+r+pq+pr+qr).toFixed(2));
 
         //------------------
             resultados[geracoes] = new Array(7);
@@ -129,7 +129,7 @@ $(document).ready(function($) {
          var alelos = parseFloat((document.querySelector("#alelos")).value);
          
          var total = ((alelos*(alelos+1))/2);
-         console.log(alelos+1);
+        //  console.log(alelos+1);
          var numero_heterozigotos = ((alelos*(alelos-1))/2);
          var porcentagem_homozigoto  = (alelos/total)*100;
          var porcentagem_heterozigotos  = (numero_heterozigotos/total)*100;

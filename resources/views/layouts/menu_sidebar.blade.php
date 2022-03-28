@@ -1,86 +1,92 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#3CB371;">
     <!-- Brand Logo -->
-    <a href="/home" class="brand-link brand-link">
+    <a href="/home" class="brand-link brand-link" >
 
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="brand-text"><img src="" >Pop</span>
+      <span class="brand-text" style="color:black;"><img src="" >Pop</span>
     </a>
     <!-- Sidebar -->
-    <div class="sidebar">
-    @if (! Auth::guest())
+    <div class="sidebar" style="max-height: 100%;">
+    <!-- @if (! Auth::guest())
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="info">
-            <?php $primeiroNome = explode(' ', Auth::user()->nome); ?>
             <a href="/home" class="d-block"> Olá, {{$primeiroNome[0]}}</a>
-            <!-- <span class="right badge badge-info">{{Auth::user()->getRoleNames()}}</span> -->
+             <span class="right badge badge-info">{{Auth::user()->getRoleNames()}}</span> 
           </div>
           <br>
       </div>
-      @endif
+    @endif -->
              
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+      <nav class="mt-2" >
+        <ul class="nav nav-pills nav-sidebar flex-column " data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                 with font-awesome or any other icon font library -->
-            <li class="nav-header">MENU</li>
+          <li class="nav-header" style="color:black;">MENU</li>
 
-            <li class="nav-item">
-              <a href="/home" class="nav-link">
-                  <i class="nav-icon fas fa-project-diagram"></i>
-                  <p>
-                      Home
-                  </p>
-              </a>
-          </li>
           <li class="nav-item">
-              <a href="#" class="nav-link">
-                
-                  <p>
-                    <i class="fas fa-balance-scale"></i>
-                      Equilíbrio de </br>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      Hardy-Weinberg
-                  </p>
-              </a>
+            <a href="/home" class="nav-link destaque">
+                <i class="nav-icon fas fa-project-diagram"></i>
+                <span class="texto-estilo">
+                    <p>Home</p>
+                </span>
+            </a>
+          </li>
+          <li class="nav-item" >
+            <a href="#" class="nav-link destaque estilo-icon">
+                <i class="nav-icon fas fa-balance-scale "></i>
+                <span class="texto-estilo">
+                  <p>Equilíbrio de</p>
+                </span>
+                <br>
+                <span class="texto-estilo" style="margin-left:16.5%;">
+                  <p>Hardy-Weinberg</p>
+                </span>
+            </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="/equilibrio/por-geracao" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;<i class="fas fa-leaf"></i>
-                      <p>
+                  <a href="/equilibrio/por-geracao" class="nav-link destaque">
+                  &nbsp;&nbsp;&nbsp;<i class="nav-icon fas fa-leaf"></i>
+                      <span class="texto-estilo">
                       Calculo por geração
-                      </p>
+                      </span>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="/equilibrio/todas-geracoes" class="nav-link">
-                  &nbsp;&nbsp;&nbsp;<i class="fas fa-seedling"></i>
-                      <p>
+                  <a href="/equilibrio/todas-geracoes" class="nav-link destaque">
+                  &nbsp;&nbsp;&nbsp;<i class="nav-icon fas fa-seedling"></i>
+                      <span class="texto-estilo">
                         Calculo todas gerações
-                      </p>
+                      </span>
                   </a>
                 </li>
               </ul>
           </li>
           <li class="nav-item">
-              
-              <a href="/sexo" class="nav-link">
-              <i class="fas fa-transgender"></i>
-                <p>
-                  Alelos Ligados ao Sexo
-                <p>
-              </a>
-        
-          <li class="nav-item">
-              <a href="/polialelia" class="nav-link">
-                <i class="fas fa-tint"></i>
-                <p>
-                  Polialelia
-                <p>
-              </a>
+            <a href="/sexo" class="nav-link destaque">
+              <i class="nav-icon fas fa-transgender"></i>
+              <span class="texto-estilo">
+                <p>Alelos Ligados ao Sexo </p>
+              </span>
+            </a>
           </li>
-         
+          <li class="nav-item">
+            <a href="/polialelia" class="nav-link destaque">
+              <i class="nav-icon fas fa-tint"></i>
+              <span class="texto-estilo"> 
+                <p>Polialelia</p>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/poliploidia" class="nav-link destaque">
+              <i class="nav-icon fas fa-dna"></i>
+              <span class="texto-estilo"> 
+                <p>Poliploidia</p>
+              </span>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

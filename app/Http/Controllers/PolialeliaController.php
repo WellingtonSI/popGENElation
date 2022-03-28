@@ -14,6 +14,7 @@ class PolialeliaController extends Controller
     public function index()
     {
         return view('Polialelia.index');
+        //a
     }
 
     /**

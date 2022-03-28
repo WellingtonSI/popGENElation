@@ -1,0 +1,15 @@
+/* --------------------------------- menu sidebar -------------------------- */
+.texto-estilo{
+    color: black;
+
+}
+.destaque:hover {
+    font-weight: bold;
+}
+a .estilo-icon{
+    color: #C2C7D0;
+}
+.nav-link .estilo-icon:hover{
+    color: white;
+}
+/* --------------------------------- menu sidebar -------------------------- */
