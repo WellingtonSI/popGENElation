@@ -141,7 +141,6 @@ Hardy-Weinbergme')
     $(document).on('click', '.btnDefinir', function () {
         limite_geracoes = document.getElementById("geracao").value;
         $("#geracao").prop('disabled',true);
-
     });
     $(document).on('click', '.btnaddCalcular', function () {
         $('.callout3').removeClass('hidden');
