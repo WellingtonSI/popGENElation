@@ -46,27 +46,25 @@ $(document).ready(function($) {
             swal("Atenção!", "Selecione o campo Grau de Ploidia (N)","error")
         }else {
             for(var i=0;i<n;i++){
-                //console.log(valorTotal);
                 valorTotal=round(valorTotal,document.getElementById(Alelos[i]).value);
-                //console.log(round(parseFloat(document.getElementById(Alelos[i])),3));
             }
-                
-            
-                console.log(valorTotal,'esse aqui é ofinal');
             if(valorTotal==1){
                 $('#resultado').empty();
                 var resultado = '';
                 //criação de cada termo da equação  e o valor dele, por exemplo 2pq = valor (2*p*q)
                 for(i=0;i<n;i++){
                     let frequenciaBase = parseFloat(document.querySelector('#'+Alelos[i]).value);
-                    for(k=i+1;k<n;k++){
+                    for(k=i;k<n;k++){
                         let Proximafrequencia = parseFloat(document.querySelector('#'+Alelos[k]).value);
-                        resultado+= (k == i+1 ?  
-                                                Alelos[i]+'<sup>2</sup> = '+  (frequenciaBase*frequenciaBase).toFixed(3) +'</br>'
-                                                :  '2'+Alelos[i]+Alelos[k]+' = '+(2*frequenciaBase*Proximafrequencia).toFixed(3)+'</br>' )
+                        resultado+= (k == i ?  
+                                               '<button type="button" class="btn btn-success col-md-sm-3 col-3 ">'+Alelos[i]+'<sup>2</sup> = '+  (frequenciaBase*frequenciaBase).toFixed(3)+'</button>'
+                                                 
+                                                : '<button type="button" class="btn btn-success col-md-sm-3 col-3">2'+Alelos[i]+Alelos[k]+' = '+(2*frequenciaBase*Proximafrequencia).toFixed(3)+'</button>'
+                                                )
 
                     }
                 }
+                resultado+='</br>';
                 $('#resultado').append(resultado);
             }else{
                 swal("Atenção!", "As somas das frequências (p+q+r+...+z) está menor ou maior que 1", "error");
@@ -97,13 +95,5 @@ $(document).ready(function($) {
         return fatorial(n)/(fatorial(p)*fatorial(n-p));
     }
 
-    // expoente_q != 0 ?  
-    //                         n==expoente_q? 
-    //                                 n!=1 ? combinatoria (n,expoente_q): ''
-    //                         :combinatoria (n,expoente_q) 
-    //                     :''
-    // (expoente_p >0 ? 
-    //     expoente_p ==1 ?'p' : 'p<sup>'+expoente_p+'</sup>' 
-    // :'')
 
 })

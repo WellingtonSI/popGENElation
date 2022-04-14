@@ -66,14 +66,8 @@
                                             </span>
                                             @enderror
                                         </div>
-                                        <div class="form-group col-md-2 col-mt-5">
-                                            </br>  
-                                            <button class="form-control btn-primary btnDefinir" >
-                                                Definir
-                                            </button> 
-                                        </div>
                                     </div>
-                                    <div id="frequencias">
+                                    <div  id="frequencias">
 
                                     </div>
                                     <!-- <div class="form-group col-md-6">

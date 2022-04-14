@@ -159,6 +159,8 @@
                                 </div>
                             </div>  
                         </div>
+                        <div class="col-md-6" id="todos_resultados">
+                        </div>
                 </div>   
                 <!-- /.card-body -->   
             </div>
@@ -169,5 +171,6 @@
 </section 
 @endsection 
 @section('scripts_adicionais') 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="{{ asset('js/polialelia.js') }}"></script>
 @endsection
