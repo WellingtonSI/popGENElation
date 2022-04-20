@@ -34,6 +34,7 @@ Route::resource('equilibrio ', 'EquilibrioController');
 Route::resource('sexo', 'SexoController');
 Route::resource('polialelia', 'PolialeliaController');
 Route::resource('poliploidia', 'PoliploidiaController');
+Route::resource('selecao', 'SelecaoController');
 
 
 

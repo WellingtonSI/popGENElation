@@ -4,7 +4,7 @@
     <a href="/home" class="brand-link brand-link" >
 
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="brand-text" style="color:black;"><img src="" >Pop</span>
+      <span class="brand-text" style="color:black;"><img src="" >POPGENELATION</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar" style="max-height: 100%;">
@@ -84,6 +84,14 @@
               <i class="nav-icon fas fa-dna"></i>
               <span class="texto-estilo"> 
                 <p>Poliploidia</p>
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/selecao" class="nav-link destaque">
+            <i class="nav-icon fas fa-sitemap"></i>
+              <span class="texto-estilo"> 
+                <p>Seleção Gamética</p>
               </span>
             </a>
           </li>
