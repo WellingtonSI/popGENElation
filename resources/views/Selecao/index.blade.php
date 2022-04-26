@@ -2,7 +2,7 @@
 @section('htmlheader_title', 'Seleção Gamética')
 @section('contentheader_title', 'Seleção Gamética')
 @section('links_adicionais')
-    <link rel="stylesheet"  href="{{asset('css/style_poliploidia.css')}}">
+    <link rel="stylesheet"  href="{{asset('css/style_selecao.css')}}">
 @endsection
 @section('conteudo')
 <!-- Content Wrapper. Contains page content -->
@@ -50,56 +50,30 @@
                                             <div class="form-group col-md-12">
                                                 <strong>P<span style="color: red;">*</span></strong>
                                                 <input type="number" autocomplete="off" name="P" id="P" class="form-control @error('AA') is-invalid @enderror" value="{{ old('P') }}">
-                                                @error('P')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <strong>Q<span style="color: red;">*</span></strong>
                                                 <input type="number" autocomplete="off" name="Q" id="Q" class="form-control @error('Q') is-invalid @enderror" value="{{ old('Q') }}">
-                                                @error('Q')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <strong>X<span style="color: red;">*</span></strong>
                                                 <input type="number" autocomplete="off" name="X" id="X" class="form-control @error('X') is-invalid @enderror" value="{{ old('X') }}">
-                                                @error('X')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
+
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <strong>Y<span style="color: red;">*</span></strong>
                                                 <input type="number" autocomplete="off" name="Y" id="Y" class="form-control @error('Y') is-invalid @enderror" value="{{ old('Y') }}">
-                                                @error('Y')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
+
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <strong>Z<span style="color: red;">*</span></strong>
                                                 <input type="number" autocomplete="off" name="Z" id="Z" class="form-control @error('Z') is-invalid @enderror" value="{{ old('Z') }}">
-                                                @error('Z')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
+
                                             </div>
                                             <div class="form-group col-md-12">
                                                 <strong>Coeficiente de Seleção (S)<span style="color: red;">*</span></strong>
                                                 <input type="number" autocomplete="off" name="conficiente" id="conficiente" class="form-control @error('conficiente') is-invalid @enderror" value="{{ old('conficiente') }}">
-                                                @error('conficiente')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                                @enderror
+
                                             </div>
 
                                             <hr>
@@ -112,18 +86,15 @@
                                     <hr>
                                     <button type="submit" class="btn btn-info float-right col-md-sm-3 col-3 btnCalcular" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>
                                         &nbsp Aguarde..." style="margin-right:20%">Calcular</button>
+                                    <button type="submit" class="btn btn-warning float-right col-md-sm-3 col-3 btnLimpar" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>
+                                        &nbsp Aguarde..." style="margin-right:20%" hidden>Limpar</button>
 
-                                    <div class="form-group col-md-6">
-                                        <div class="erros callout3 callout-danger hidden float-left" style="color:red;">
-                                            <p></p>
-                                        </div>
-                                    </div>
                                 </div>
                                 
-                                <div class="form-group col-md-6 col-sm-12 col-12" style="position:relative;width:100px;height:250px;">
+                                <div class="form-group col-md-6 col-sm-12 col-12" >
                                     <!-- <h4 style="text-align: center"> Resultados</h4>
                                     <div class="texto-resultado" id="resultado"  ></div> -->
-                                    <table border="1" style="margin-top:20%">
+                                    <table border="1" style="margin-top:18.6%">
                                         <tr>
                                             <th>Genes</th>
                                             <th colspan="4">Genótipos</th>

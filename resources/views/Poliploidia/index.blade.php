@@ -35,7 +35,8 @@
                     </br><span><strong>q</strong> maior e igual <strong>0</strong> e <strong>q</strong> menor e igual <strong>1</span>
                     </br><span><strong>p</strong> + <strong>q</strong> = 1</span> -->
                     <hr>
-                    <span>Selecione a quantidade de alelos que possa aparecer os campos necessários!</span>
+                    <strong><span>Selecione a quantidade de alelos que possa aparecer os campos necessários!</span></strong><br> 
+                    <span>As somas das frequências (p+q+r+...+z) deve ser igual a 1!</span>
 
                 </div>
                 @if (Session::has('message'))
@@ -99,7 +100,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="form-group col-md-6 col-sm-12 col-12" style="position:relative;width:100px;height:250px;">
+                                <div class="form-group col-md-6 col-sm-12 col-12"  style="position:relative;width:100px;height:250px;">
                                     <h4 style="text-align: center"> Resultados</h4>
                                     <div class="texto-resultado" id="resultado"  ></div>
                                 </div>

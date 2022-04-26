@@ -117,13 +117,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+                        
                                 <div class="form-group col-md-6" style="position:relative;width:100px;height:250px;">
                                     <h4 style="text-align: center"> Resultados</h4>
                                     <div id="resultado" style='margin-left:30px' ></div>
                                 </div>
-                                
-                            <hr>
+                                <hr>
                             </div>
                             <hr>
                             <div class="row" >
@@ -153,13 +152,14 @@
                                        Voltar para 3 Alelos
                                     </button> 
                                 </div> -->
-                                <div class=" col-md-6">
+                              
+                                <div class="col-md-6 col-sm-12 col-12 ">
                                     <h4 style="text-align: center"> Resultados</h4>
-                                    <div id="resultado_maisalelos" style='margin-left:30px'></div>
+                                    <div id="resultado_maisalelos" style='margin-left:30px' ></div>
                                 </div>
                             </div>  
                         </div>
-                        <div class="col-md-6" id="todos_resultados">
+                        <div class="form-group col-md-6 col-sm-12 col-12" id="todos_resultados">
                         </div>
                 </div>   
                 <!-- /.card-body -->   

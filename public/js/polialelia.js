@@ -155,9 +155,9 @@ $(document).ready(function($) {
              for(let k=i;k<=alelos;k++){
                
                 if(k==i){
-                    homozigotos+="( A"+i+"A"+k+" ) ";
+                    homozigotos+="<button type='button' class='btn btn-danger btn-sm col-md-sm-2 col-2' >A"+i+"A"+k+"</button>";
                 }else{
-                    heterozigotos+="( A"+i+"A"+k+" ) ";
+                    heterozigotos+="<button type='button' class='btn btn-danger btn-sm col-md-sm-2 col-2' >A"+i+"A"+k+"</button>";
                 }
              }
          }
