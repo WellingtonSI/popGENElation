@@ -1,7 +1,9 @@
 $(document).ready(function($) {
     const Alelos = ['p','q','r','s','t','x','y','z']; 
+    //let re = new RegExp("0\.\d{3}");
     $("#grau").on('change', function() {
         $('#frequencias').empty();
+        $('.callout3').find('p').text("");
         var n = parseInt(document.querySelector('#grau').value);
         if(!isNaN(n)){
             for(i=0;i<n;i++){
@@ -10,32 +12,46 @@ $(document).ready(function($) {
                                             "<input type='text' autocomplete='off' max='1' min='0' name='"+Alelos[i]+"' id='"+Alelos[i]+"' class='form-control frequencia'>"+ 
                                             "<span class='invalid-feedback' role='alert'> <strong ></strong></span>"+
                                          "</div>");
-                                        $("#"+Alelos[i]).mask("9.999");
+                                        $("#"+Alelos[i]).mask("0.999");
+
+                var input = document.querySelector('#'+Alelos[i]);
+                input.onkeypress = verificacao;
             }
+
+            
         }else{
             swal("Atenção!", "Selecione a quantidade de alelos","error");
         }
+
+
+       
     });
-   
-    
-    // q.oninput = ()=>{
-    //     console.log(document.getElementById("q").value); 
-    // }
-    // const dominante = document.querySelector('#p');
-    // dominante.addEventListener('blur', function(evento){
-    //     q = document.getElementById("q").value;
-    //     if(this.value > 1){
-    //         swal("Atenção!", "frequência do alelo dominante maior que 1", "error");
-    //         this.value='';
-    //     }
-        
-    // });
-    // const recessivo = document.querySelector('#q');
-    // recessivo.addEventListener('blur', function(evento){
-    //     p = document.getElementById("p").value;
-    //     if(this.value > 1)
-    //     swal("Atenção!", "frequência do alelo recessivo maior que 1", "error");
-    // });
+
+    function verificacao(){
+        $('.callout3').find('p').text(""); //limpa a div para erros successivos
+        //expressão regular pra testar se no valor do input está no padrão de "0.999"
+        if(/0\.\d{3}/.test(this.value)){
+            var inputComConteudo=0;
+            var grau = parseInt(document.querySelector('#grau').value);
+            var acumulador='';
+            var valor ='';
+                for(i=0;i<grau;i++){
+                    valor = document.getElementById(Alelos[i]).value
+                    acumulador=round(acumulador,valor)
+                    if(valor)
+                        inputComConteudo++;
+                }
+                if(acumulador>1){
+                    $('.callout3').find("p").append("As somas das frequências está maior que 1");
+                }
+                else if(inputComConteudo==grau){
+                    if(acumulador<1)
+                        $('.callout3').find("p").append("As somas das frequências está menor que 1");
+                }
+            
+        }
+    } 
+  
 
     //o expoente na equação sempre será 2 (x + y + z)^2
     $(document).on('click','.btnCalcular', function(){
@@ -78,6 +94,9 @@ $(document).ready(function($) {
     function round (num1,num2) {
         if(num1==''){
             return num2;
+        }
+        else if(num2==''){
+            return num1;
         }else{
             var ArrayNum1 = num1.split(".");
             var ArrayNum2 = num2.split(".");
@@ -91,9 +110,4 @@ $(document).ready(function($) {
         
     }
     
-    function combinatoria (n,p){
-        return fatorial(n)/(fatorial(p)*fatorial(n-p));
-    }
-
-
 })
