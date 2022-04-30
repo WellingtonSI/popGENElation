@@ -117,7 +117,7 @@ $(document).ready(function($) {
                 if(geracoes==2){
                     $('.btn')[0].style.display="block";
                 }
-                $("#resultado").append("<strong id='frequencia-polelia'><p ></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</p></strong><span id='span-polelia' style='position:absolute;top:50%;left:42%;transform:translate(-50%,-50%);font-size:20px;color: red;'</br></br></br></br></br></br></br></br></br></br><strong>A polulação não está em equilíbrio</strong></span>")
+                $("#resultado").append("<strong id='frequencia-polelia'><p ></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</br></br><p style='color:red; text-align:center'>A polulação não está em equilíbrio</p></strong>")
             }
         }else{
             swal("Atenção!", "Preencha todos os campos", "error");

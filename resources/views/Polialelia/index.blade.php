@@ -118,9 +118,9 @@
                                     </div>
                                 </div>
                         
-                                <div class="form-group col-md-6" style="position:relative;width:100px;height:250px;">
+                                <div class="form-group col-md-6" ">
                                     <h4 style="text-align: center"> Resultados</h4>
-                                    <div id="resultado" style='margin-left:30px' ></div>
+                                    <div id="resultado" style='margin-left:30px; font-size: 20px;' ></div>
                                 </div>
                                 <hr>
                             </div>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>  
                         </div>
-                        <div class="form-group col-md-6 col-sm-12 col-12" id="todos_resultados">
+                        <div class="form-group col-md-6 col-sm-12 col-12" id="todos_resultados" style='font-size: 20px;'>
                         </div>
                 </div>   
                 <!-- /.card-body -->   
