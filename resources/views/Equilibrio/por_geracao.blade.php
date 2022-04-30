@@ -78,12 +78,12 @@ Hardy-Weinbergme')
                                         @enderror
                                     </div>
                                     <hr>
-                                    <button type="submit" class="btn btn-info float-right col-md-3 btnaddCalcular" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>
+                                    <button type="submit" class="btn btn-info float-right col-md-3 btnCalcular" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>
                                         &nbsp Aguarde...">Calcular</button>
 
                                     <div class="form-group col-md-6">
                                         <div class="erros callout3 callout-danger hidden float-left" style="color:red;">
-                                            <p></p>
+                                            <strong><p></p></strong>
                                         </div>
                                     </div>
                                 </div>
@@ -103,16 +103,13 @@ Hardy-Weinbergme')
 </section 
 @endsection 
 @section('scripts_adicionais') 
- <script src="{{ asset('js/equilibrio.js') }}" type="modulo">
-</script>
 <script src="{{ asset('js/chart.js') }}"></script> 
-<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
 <script>
     var geracoes = 0;
     var xValues = new Array(); 
     var p = new Array();
     var q = new Array();
-    $(document).on('click', '.btnaddCalcular', function () {
+    $(document).on('click', '.btnCalcular', function () {
         $('.callout3').removeClass('hidden');
         $('.callout3').addClass('hidden'); //oculta a div para erros successivos
         $('.callout3').find('p').text(""); //limpa a div para erros successivos
@@ -148,41 +145,15 @@ Hardy-Weinbergme')
                         datasets: [{
                             label: 'Q',
                             data: q,
-                            // backgroundColor: [  
-                            //     'rgba(255, 99, 132, 0.2)',
-                            //     'rgba(54, 162, 235, 0.2)',
-                            //     'rgba(255, 206, 86, 0.2)',
-                            //     'rgba(75, 192, 192, 0.2)',
-                            //     'rgba(153, 102, 255, 0.2)',
-                            //     'rgba(255, 159, 64, 0.2)'
-                            // ],
                             borderColor: [
-                                // 'rgba(255, 99, 132, 1)',
-                                // 'rgba(54, 162, 235, 1)',
-                                // 'rgba(255, 206, 86, 1)',
-                                // 'rgba(75, 192, 192, 1)',
-                                // 'rgba(153, 102, 255, 1)',
                                 'rgba(255, 159, 64, 1)'
                             ],
                             borderWidth: 1
                         },{
                             label: 'P',
                             data: p,
-                            // backgroundColor: [  
-                            //     'rgba(255, 99, 132, 0.2)',
-                            //     'rgba(54, 162, 235, 0.2)',
-                            //     'rgba(255, 206, 86, 0.2)',
-                            //     'rgba(75, 192, 192, 0.2)',
-                            //     'rgba(153, 102, 255, 0.2)',
-                            //     'rgba(255, 159, 64, 0.2)'
-                            // ],
                             borderColor: [
-                                // 'rgba(255, 99, 132, 1)',
-                                // 'rgba(54, 162, 235, 1)',
-                                // 'rgba(255, 206, 86, 1)',
-                                // 'rgba(75, 192, 192, 1)',
                                 'rgba(153, 102, 255, 1)',
-                                // 'rgba(255, 159, 64, 1)'
                             ],
                             borderWidth: 1
                         }]
@@ -196,6 +167,9 @@ Hardy-Weinbergme')
                     }
                 });
             });
+            $('#AA').val("")
+            $('#Aa').val("")
+            $('#aa').val("")
         }else if(geracoes<=20){
             if (!Quantidade_AA) {
                     $('.callout3').find("p").append(" - Preencha o campo de genótipos AA </br>");
@@ -218,41 +192,15 @@ Hardy-Weinbergme')
         data: {
             datasets: [{
                 label: 'Q',
-                // backgroundColor: [  
-                //     'rgba(255, 99, 132, 0.2)',
-                //     'rgba(54, 162, 235, 0.2)',
-                //     'rgba(255, 206, 86, 0.2)',
-                //     'rgba(75, 192, 192, 0.2)',
-                //     'rgba(153, 102, 255, 0.2)',
-                //     'rgba(255, 159, 64, 0.2)'
-                // ],
                 borderColor: [
-                    // 'rgba(255, 99, 132, 1)',
-                    // 'rgba(54, 162, 235, 1)',
-                    // 'rgba(255, 206, 86, 1)',
-                    // 'rgba(75, 192, 192, 1)',
-                    // 'rgba(153, 102, 255, 1)',
                     'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1
             
             }, {
                 label: 'P',
-                // backgroundColor: [  
-                //     'rgba(255, 99, 132, 0.2)',
-                //     'rgba(54, 162, 235, 0.2)',
-                //     'rgba(255, 206, 86, 0.2)',
-                //     'rgba(75, 192, 192, 0.2)',
-                //     'rgba(153, 102, 255, 0.2)',
-                //     'rgba(255, 159, 64, 0.2)'
-                // ],
                 borderColor: [
-                    // 'rgba(255, 99, 132, 1)',
-                    // 'rgba(54, 162, 235, 1)',
-                    // 'rgba(255, 206, 86, 1)',
-                    // 'rgba(75, 192, 192, 1)',
                     'rgba(153, 102, 255, 1)',
-                    // 'rgba(255, 159, 64, 1)'
                 ],
                 borderWidth: 1
             }]

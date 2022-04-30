@@ -130,7 +130,6 @@ Hardy-Weinbergme')
 </section 
 @endsection 
 @section('scripts_adicionais') 
-<script src="{{ asset('js/equilibrio.js') }}" type="modulo"></script> 
 <script src="{{ asset('js/chart.js') }}"></script>
 <script>
     var geracoes = 0;
