@@ -30,6 +30,11 @@ Route::group(['prefix' => 'equilibrio'], function () {
 });
 Route::get('sexo/atualizar-mapa', ['uses' => 'SexoController@atualizar_mapa']);
 
+Route::group(['prefix' => 'selecao'], function () {
+    Route::get('/completa', ['uses' => 'SelecaoController@completo']);
+    Route::get('/completa/contraDominante', ['uses' => 'SelecaoController@contra_dominante']);
+});
+
 Route::resource('equilibrio ', 'EquilibrioController');
 Route::resource('sexo', 'SexoController');
 Route::resource('polialelia', 'PolialeliaController');

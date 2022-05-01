@@ -1,6 +1,6 @@
 $(document).ready(function($) {
     const Alelos = ['p','q','r','s','t','x','y','z']; 
-    //let re = new RegExp("0\.\d{3}");
+
     $("#grau").on('change', function() {
         $('#frequencias').empty();
         $('.callout3').find('p').text("");

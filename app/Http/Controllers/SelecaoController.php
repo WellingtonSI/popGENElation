@@ -10,4 +10,12 @@ class SelecaoController extends Controller
     {
         return view('Selecao.index');
     }
+    public function completo()
+    {
+        return view('Selecao.completo');
+    }
+    public function contra_dominante()
+    {
+        return view('Selecao.contra_dominante');
+    }
 }

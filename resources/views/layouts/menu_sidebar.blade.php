@@ -87,17 +87,41 @@
               </span>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
+            <a href="#" class="nav-link destaque estilo-icon">
+                <i class="nav-icon fas fa-sitemap"></i>
+                <p class="texto-estilo">Seleção Gamética</p>
+            </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/selecao/completa" class="nav-link destaque">
+                  &nbsp;&nbsp;&nbsp;<i class="nav-icon fas fa-leaf"></i>
+                      <span class="texto-estilo">
+                        Dominância Completa
+                      </span>
+                  </a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a href="/equilibrio/todas-geracoes" class="nav-link destaque">
+                  &nbsp;&nbsp;&nbsp;<i class="nav-icon fas fa-seedling"></i>
+                      <span class="texto-estilo">
+                        Dominância Incompleta
+                      </span>
+                  </a>
+                </li> -->
+              </ul>
+          </li>
+          <!-- <li class="nav-item">
             <a href="/selecao" class="nav-link destaque">
             <i class="nav-icon fas fa-sitemap"></i>
               <span class="texto-estilo"> 
                 <p>Seleção Gamética</p>
               </span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
+    <!-- /.sidebar --> 
   </aside>
