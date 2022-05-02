@@ -62,18 +62,18 @@
                                         </div>
                                     </div>
                                     <div  id="resultado">
-
+                                    </div>
+                                    <div class="row">
+                                        <div class="erros callout3 callout-danger hidden float-left" style="color:white;">
+                                            <p class="error-style"></p>
+                                        </div>
                                     </div>
                                     
                                     <hr>
                                     <button type="submit" class="btn btn-info float-right col-md-sm-3 col-3 btnCalcular" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>
                                         &nbsp Aguarde..." style="margin-right:20%">Calcular</button>
                                     <button type="submit" class="btn btn-warning float-right col-md-sm-3 col-3 btnLimpar" title="Limpar a tabela de resultado" style="margin-right:20%" hidden>Limpar</button>
-                                    <div class="form-group col-md-6">
-                                        <div class="erros callout3 callout-danger hidden float-left" style="color:white;">
-                                            <p class="error-style"></p>
-                                        </div>
-                                    </div>
+                                    
                                    
 
                                 </div>

@@ -1,14 +1,15 @@
 
 var valores='';
+$("#P").mask("0.999");
+$("#Q").mask("0.999");
+$("#conficiente").mask("0.999");
 var p = document.querySelector('#P');
 var q = document.querySelector('#Q');
 var s = document.querySelector('#conficiente');
 p.onkeypress = verificacao;
 q.onkeypress = verificacao;
 s.onkeypress = verificacao;
-$("#P").mask("0.999");
-$("#Q").mask("0.999");
-$("#conficiente").mask("0.999");
+
 
 
 
@@ -106,10 +107,11 @@ $(document).on('click','.btnLimpar', function(){
 });
 
 function verificacao(){
-    $('.callout3').find('p').text(""); //limpa a div para erros successivos
+    
     console.log(this.value,this);
     //expressão regular pra testar se no valor do input está no padrão de "0.999"
     if(/0\.\d{3}/.test(this.value)){
+        $('.callout3').find('p').text(""); //limpa a div para erros successivos
         console.log('entrou');
         var conficiente = document.querySelector('#conficiente').value;
         var dominante = document.querySelector('#P').value;
