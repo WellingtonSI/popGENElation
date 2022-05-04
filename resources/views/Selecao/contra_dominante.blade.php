@@ -29,7 +29,13 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    (<span style="color: red;">*</span>) Campos Obrigatórios
+                    <div class="float-left">
+                        (<span style="color: red;">*</span>) Campos Obrigatórios
+                    </div>
+                    <div class="float-right">
+                        <a href="{{ URL::to('/selecao/completa') }}"><button 
+                        class="btn btn-block btn-outline-primary"><i class="fas fa-undo"></i> Voltar</button></a>
+                    </div>
                 </div>
                 @if (Session::has('message'))
                 <div class="alert alert-danger alert-dismissible">
