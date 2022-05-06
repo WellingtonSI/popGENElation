@@ -52,15 +52,15 @@
                                     <div class="row">
                                         <div id="valores">
                                             <div class="form-group col-md-12">
-                                                <strong>P<span style="color: red;">*</span></strong>
+                                                <strong>p<span style="color: red;">*</span></strong>
                                                 <input type="text" autocomplete="off" name="P" id="P" class="form-control @error('AA') is-invalid @enderror" value="{{ old('P') }}">
                                             </div>
                                             <div class="form-group col-md-12">
-                                                <strong>Q<span style="color: red;">*</span></strong>
+                                                <strong>q<span style="color: red;">*</span></strong>
                                                 <input type="text" autocomplete="off" name="Q" id="Q" class="form-control @error('Q') is-invalid @enderror" value="{{ old('Q') }}">
                                             </div>
                                             <div class="form-group col-md-12">
-                                                <strong>Coeficiente de Seleção (S)<span style="color: red;">*</span></strong>
+                                                <strong>Coeficiente de Seleção (s)<span style="color: red;">*</span></strong>
                                                 <input type="text" autocomplete="off" name="conficiente" id="conficiente" class="form-control @error('conficiente') is-invalid @enderror" value="{{ old('conficiente') }}">
 
                                             </div>

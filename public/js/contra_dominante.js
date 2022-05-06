@@ -1,7 +1,7 @@
 
 var valores='';
-$("#P").mask("0.999");
-$("#Q").mask("0.999");
+$("#P").mask("9.999");
+$("#Q").mask("9.999");
 $("#conficiente").mask("0.999");
 var p = document.querySelector('#P');
 var q = document.querySelector('#Q');
