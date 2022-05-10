@@ -55,10 +55,10 @@ $(document).on('click','.btnCalcular', function(){
                                     '</tr>'+
                                     '<tr>'+
                                         '<td>Frequência DEPOIS da Seleção</td>'+
-                                        '<td>'+(p*p).toFixed(3)+'</td>'+
-                                        '<td>'+(2*p*q).toFixed(3)+'</td>'+
-                                        '<td>'+(q*q*valorAdaptativo).toFixed(3)+'</td>'+
-                                        '<td>'+(1-s*(p*p)).toFixed(3)+'</td>'+
+                                        '<td>'+(p*p*valorAdaptativo).toFixed(3)+'</td>'+
+                                        '<td>'+(2*p*q*valorAdaptativo).toFixed(3)+'</td>'+
+                                        '<td>'+(q*q).toFixed(3)+'</td>'+
+                                        '<td>'+(1-s*p*(2-p)).toFixed(3)+'</td>'+
                                     '</tr>'+
                                 '</table>'
                          );
@@ -101,6 +101,7 @@ function verificacao(){
     
     //expressão regular pra testar se no valor do input está no padrão de "0.999"
     if(/\d\.\d{3}/.test(this.value)){
+    
         $('.callout3').find('p').text(""); //limpa a div para erros successivos
 
         var conficiente = document.querySelector('#conficiente').value;

@@ -38,11 +38,15 @@
                 </div>
                 @endif
                 <div class="card-body">
-                        <div class="container" style="display: block;" >
-                        <button type="button" class="btn bg-gradient-primary float-left col-md-4 btnContraDominante btnStyle" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>Aguarde...">Contra alelo dominante</button>
-                             
-                                    
+                    <div class='row'> 
+                        <div class=" col-md-3" style="" >
+                            <a href="{{ URL::to('/selecao/completa/contra-dominante') }}"  class="btn bg-gradient-primary btnStyle"> Contra alelo dominante</a>  
                         </div>
+                        <div class=" col-md-3"  style=" " >
+                        <a href="{{ URL::to('/selecao/completa/contra-recessivo') }}"  class="btn bg-gradient-primary btnStyle"> Contra alelo recessivo (PARCIAL)</a> 
+      
+                        </div>
+                    </div>
                 </div>   
                 <!-- /.card-body -->   
             </div>
@@ -54,11 +58,10 @@
 @endsection 
 @section('scripts_adicionais') 
 <script src="{{ asset('js/selecao_completo.js') }}"></script>
-<script>
+<!-- <script>
     $(document).on('click','.btnContraDominante', function(){
         base_url = window.location.origin;
-        console.log(base_url);
         window.location.assign(base_url+"/selecao/completa/contraDominante");
     });
-</script>
+</script> -->
 @endsection
