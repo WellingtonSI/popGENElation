@@ -31,11 +31,11 @@ $(document).ready(function($) {
         function apresentacao(resultdo,index) {
             
             if(resultdo[7]==1){
-                $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: green;'</br><strong>A polulação está em equilíbrio</strong></span></br>_____________________________________________</br>")
+                $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: green;'</br><strong>A população está em equilíbrio</strong></span></br>_____________________________________________</br>")
     
             }else{
                 console.log(resultdo);
-                $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: red;'</br><strong>A polulação não está em equilíbrio</strong></span></br>_____________________________________________</br>")
+                $("#todos_resultados").append("<h4> Geração "+(index+1)+"</h4><strong id='frequencia-polelia'><p style='margin-left:20px'></br></br>A1A1 = "+(resultdo[0]/resultdo[6]).toFixed(3)+"</br>A1A2 = "+(resultdo[1]/resultdo[6]).toFixed(3)+"</br>A1A3 = "+(resultdo[2]/resultdo[6]).toFixed(3)+"</br>A2A2 = "+(resultdo[3]/resultdo[6]).toFixed(3)+"</br>A2A3 = "+(resultdo[4]/resultdo[6]).toFixed(3)+"</br>A3A3 = "+(resultdo[5]/resultdo[6]).toFixed(3)+"</p></strong><span id='span-polelia' style='font-size:20px;color: red;'</br><strong>A população não está em equilíbrio</strong></span></br>_____________________________________________</br>")
             }
             
         }
@@ -111,13 +111,13 @@ $(document).ready(function($) {
                 if(geracoes==2){
                     $('.btn')[0].style.display="block";
                 }
-                $("#resultado").append("<strong id='frequencia-polelia'><p></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</p></strong><span id='span-polelia' style='position:absolute;top:50%;left:49%;transform:translate(-50%,-50%);font-size:20px;color: green;'</br></br></br></br></br></br></br></br></br></br><strong>A polulação está em equilíbrio</strong></span>")
+                $("#resultado").append("<strong id='frequencia-polelia'><p></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</br></br><p style='color: green; text-align:center'>A população está em equilíbrio</p></strong>")
 
             }else{
                 if(geracoes==2){
                     $('.btn')[0].style.display="block";
                 }
-                $("#resultado").append("<strong id='frequencia-polelia'><p ></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</br></br><p style='color:red; text-align:center'>A polulação não está em equilíbrio</p></strong>")
+                $("#resultado").append("<strong id='frequencia-polelia'><p ></br></br>A1A1 = "+(A1A1/total).toFixed(3)+"</br>A1A2 = "+(A1A2/total).toFixed(3)+"</br>A1A3 = "+(A1A3/total).toFixed(3)+"</br>A2A2 = "+(A2A2/total).toFixed(3)+"</br>A2A3 = "+(A2A3/total).toFixed(3)+"</br>A3A3 = "+(A3A3/total).toFixed(3)+"</br></br><p style='color:red; text-align:center'>A população não está em equilíbrio</p></strong>")
             }
         }else{
             swal("Atenção!", "Preencha todos os campos", "error");
