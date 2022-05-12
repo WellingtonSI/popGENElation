@@ -33,7 +33,8 @@ Route::get('sexo/atualizar-mapa', ['uses' => 'SexoController@atualizar_mapa']);
 Route::group(['prefix' => 'selecao'], function () {
     Route::get('/completa', ['uses' => 'SelecaoController@completo']);
     Route::get('/completa/contra-dominante', ['uses' => 'SelecaoController@contra_dominante']);
-    Route::get('/completa/contra-recessivo', ['uses' => 'SelecaoController@contra_recessivo']);
+    Route::get('/completa/contra-recessivo-parcial', ['uses' => 'SelecaoController@contra_recessivo_parcial']);
+    Route::get('/completa/contra-recessivo-completo', ['uses' => 'SelecaoController@contra_recessivo_completo']);
 });
 
 Route::resource('equilibrio ', 'EquilibrioController');

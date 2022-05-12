@@ -42,10 +42,13 @@
                         <div class=" col-md-3" style="" >
                             <a href="{{ URL::to('/selecao/completa/contra-dominante') }}"  class="btn bg-gradient-primary btnStyle"> Contra alelo dominante</a>  
                         </div>
-                        <div class=" col-md-3"  style=" " >
-                        <a href="{{ URL::to('/selecao/completa/contra-recessivo') }}"  class="btn bg-gradient-primary btnStyle"> Contra alelo recessivo (PARCIAL)</a> 
-      
+                        <div class=" col-md-4"  style=" " >
+                            <a href="{{ URL::to('/selecao/completa/contra-recessivo-parcial') }}"  class="btn bg-gradient-primary btnStyle"> Contra alelo recessivo (Parcial)</a> 
                         </div>
+                        <div class=" col-md-4"  style=" " >
+                            <a href="{{ URL::to('/selecao/completa/contra-recessivo-completo') }}"  class="btn bg-gradient-primary btnStyle"> Contra alelo recessivo (Completo)</a> 
+                        </div>
+                        
                     </div>
                 </div>   
                 <!-- /.card-body -->   

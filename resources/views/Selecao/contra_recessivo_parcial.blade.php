@@ -137,5 +137,5 @@
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="{{ asset('plugins/maskedinput/jquery.maskedinput.min.js') }}"></script>
 <script src="{{ asset('js/soma.js') }}"></script>
-<script src="{{ asset('js/contra_recessivo.js') }}"></script>
+<script src="{{ asset('js/contra_recessivo_parcial.js') }}"></script>
 @endsection

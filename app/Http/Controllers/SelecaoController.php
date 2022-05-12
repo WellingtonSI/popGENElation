@@ -18,8 +18,12 @@ class SelecaoController extends Controller
     {
         return view('Selecao.contra_dominante');
     }
-    public function contra_recessivo()
+    public function contra_recessivo_parcial()
     {
-        return view('Selecao.contra_recessivo');
+        return view('Selecao.contra_recessivo_parcial');
+    }
+    public function contra_recessivo_completo()
+    {
+        return view('Selecao.contra_recessivo_completo');
     }
 }
