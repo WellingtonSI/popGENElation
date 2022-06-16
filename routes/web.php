@@ -35,6 +35,9 @@ Route::group(['prefix' => 'selecao'], function () {
     Route::get('/completa/contra-dominante', ['uses' => 'SelecaoController@contra_dominante']);
     Route::get('/completa/contra-recessivo-parcial', ['uses' => 'SelecaoController@contra_recessivo_parcial']);
     Route::get('/completa/contra-recessivo-completo', ['uses' => 'SelecaoController@contra_recessivo_completo']);
+    Route::get('/completa/contra-heterozigoto', ['uses' => 'SelecaoController@contra_heterozigoto']);
+    Route::get('/completa/contra-homozigoto', ['uses' => 'SelecaoController@contra_homozigoto']);
+    Route::get('/incompleta', ['uses' => 'SelecaoController@incompleta']);
 });
 
 Route::resource('equilibrio ', 'EquilibrioController');

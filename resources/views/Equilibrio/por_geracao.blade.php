@@ -49,7 +49,7 @@ Hardy-Weinbergme')
                         <div class="container">
                             <div class="row">
 
-                                <div class="form-group col-md-6 mt-5">
+                                <div class="form-group col-md-6 mt-5 float-left">
                                     <div class="form-group col-md-12">
                                         <strong>Quantidade de genótipos AA<span style="color: red;">*</span></strong>
                                         <input type="number" autocomplete="off" name="AA" id="AA" class="form-control @error('AA') is-invalid @enderror" value="{{ old('AA') }}">

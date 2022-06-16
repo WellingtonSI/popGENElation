@@ -101,14 +101,14 @@
                       </span>
                   </a>
                 </li>
-                <!-- <li class="nav-item">
-                  <a href="/equilibrio/todas-geracoes" class="nav-link destaque">
+                <li class="nav-item">
+                  <a href="/selecao/incompleta" class="nav-link destaque">
                   &nbsp;&nbsp;&nbsp;<i class="nav-icon fas fa-seedling"></i>
                       <span class="texto-estilo">
                         Dominância Incompleta
                       </span>
                   </a>
-                </li> -->
+                </li>
               </ul>
           </li>
           <!-- <li class="nav-item">

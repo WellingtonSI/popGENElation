@@ -26,4 +26,17 @@ class SelecaoController extends Controller
     {
         return view('Selecao.contra_recessivo_completo');
     }
+    public function contra_heterozigoto()
+    {
+        return view('Selecao.contra_heterozigoto');
+    }
+    public function contra_homozigoto()
+    {
+        return view('Selecao.contra_homozigoto');
+    }
+    public function incompleta()
+    {
+        return view('Selecao.incompleta');
+    }
 }
+
