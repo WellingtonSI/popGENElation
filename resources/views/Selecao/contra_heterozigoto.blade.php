@@ -46,7 +46,7 @@
                 @endif
                 <div class="card-body">
                         <div class="container" style="display: block;" >
-                            <h4>Frequência Gênica</h4>
+                        <h4>Frequência Gênica | Frequência Genótipica | Valor Adaptativo</h4>
                             <div class="row">
                                 <div class="form-group col-md-6 mt-5">
                                     <div class="row">

@@ -4,7 +4,7 @@
     <a href="/home" class="brand-link brand-link" >
 
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="brand-text" style="color:black;"><img src="" >POPGENELATION</span>
+      <span class="brand-text" style="color:black;"><img src="" >popuGENElation</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar" style="max-height: 100%;">

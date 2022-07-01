@@ -46,7 +46,7 @@
                 @endif
                 <div class="card-body">
                         <div class="container" style="display: block;" >
-                            <h4>Frequência Gênica</h4>
+                            <h4>Frequência Gênica | Frequência Genótipica | Valor Adaptativo</h4>
                             <div class="row">
                                 <div class="form-group col-md-6 mt-5">
                                     <div class="row">
@@ -117,7 +117,14 @@
                                             <td>p<sup>2</sup>x</td>
                                             <td>2pqy</td>
                                             <td>q<sup>2</sup></td>
-                                            <td>1-sp(2-p)</td>
+                                            <td>1-sp(2-p)  <strong>(W)</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>p<sup>2</sup>x/W</td>
+                                            <td>2pqy/W</td>
+                                            <td>q<sup>2</sup>/W</td>
+                                            <td>1</td>
                                         </tr>
                                         
                                     </table>
