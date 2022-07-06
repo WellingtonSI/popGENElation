@@ -33,6 +33,7 @@ $(document).on('click','.btnCalcular', function(){
     
             var valorAdaptativo1 = 1-s1;
             var valorAdaptativo2 = 1-s2;
+            var w  = (1-s1*p*p)-(s2*q*q)
       
             valores = document.getElementById("valores").innerHTML;
             $('#valores').empty();
@@ -68,6 +69,13 @@ $(document).on('click','.btnCalcular', function(){
                                         '<td>'+(2*p*q).toFixed(3)+'</td>'+
                                         '<td>'+(q*q*valorAdaptativo2).toFixed(3)+'</td>'+
                                         '<td>'+((1-s1*p*p)-(s2*q*q)).toFixed(3)+'</td>'+
+                                    '</tr>'+
+                                    '<tr>'+
+                                        '<td></td>'+
+                                        '<td>'+((p*p*valorAdaptativo1)/w).toFixed(3)+'</td>'+
+                                        '<td>'+((2*p*q)/w).toFixed(3)+'</td>'+
+                                        '<td>'+((q*q*valorAdaptativo2)/w).toFixed(3)+'</td>'+
+                                        '<td>1</td>'+
                                     '</tr>'+
                                 '</table>'
                          );

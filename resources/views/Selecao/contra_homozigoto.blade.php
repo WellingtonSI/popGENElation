@@ -120,7 +120,14 @@
                                             <td>p<sup>2</sup>x</td>
                                             <td>2pq</td>
                                             <td>q<sup>2</sup>z</td>
-                                            <td>1 - s1p<sup>2</sup> - s2q<sup>2</sup></td>
+                                            <td>1 - s1p<sup>2</sup> - s2q<sup>2</sup>   <strong>(W)</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>p<sup>2</sup>x/W</td>
+                                            <td>2pq/W</td>
+                                            <td>q<sup>2</sup>z/W</td>
+                                            <td>1</td>
                                         </tr>
                                         
                                     </table>

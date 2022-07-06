@@ -117,7 +117,14 @@
                                             <td>p<sup>2</sup></td>
                                             <td>2pq(1 - s)</td>
                                             <td>q<sup>2</sup></td>
-                                            <td>1-2pqs</td>
+                                            <td>1-2pqs   <strong>(W)</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>p<sup>2</sup>/W</td>
+                                            <td>2pq(1 - s)/W</td>
+                                            <td>q<sup>2</sup>/W</td>
+                                            <td>1</td>
                                         </tr>
                                         
                                     </table>

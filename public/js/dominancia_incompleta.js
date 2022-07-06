@@ -24,7 +24,8 @@ $(document).on('click','.btnCalcular', function(){
         if(valorTotal==1){
     
             var valorAdaptativo = 1-s;
-      
+            var w = 2*p*q*(1-1/(2*s))
+            console.log(w,p,q,s);
             valores = document.getElementById("valores").innerHTML;
             $('#valores').empty();
             $('#resultado').append(
@@ -59,6 +60,13 @@ $(document).on('click','.btnCalcular', function(){
                                         '<td>'+(2*p*q*(1-1/(2*s))).toFixed(3)+'</td>'+
                                         '<td>'+(q*q*valorAdaptativo).toFixed(3)+'</td>'+
                                         '<td>'+(1-q*s).toFixed(3)+'</td>'+
+                                    '</tr>'+
+                                    '<tr>'+
+                                        '<td></td>'+
+                                        '<td>'+((p*p)/w).toFixed(3)+'</td>'+
+                                        '<td>'+((2*p*q*(1-1/(2*s)))/w).toFixed(3)+'</td>'+
+                                        '<td>'+((q*q*valorAdaptativo)/w).toFixed(3)+'</td>'+
+                                        '<td>1</td>'+
                                     '</tr>'+
                                 '</table>'
                          );

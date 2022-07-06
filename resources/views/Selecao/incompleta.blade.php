@@ -48,7 +48,7 @@
                         <div class="container" style="display: block;" >
                         <h4>Frequência Gênica | Frequência Genótipica | Valor Adaptativo</h4>
                             <div class="row">
-                                <div class="form-group col-md-6 mt-5">
+                                <div class="form-group col-md-6 mt-4">
                                     <div class="row">
                                         <div id="valores">
                                             <div class="form-group col-md-12">
@@ -117,7 +117,14 @@
                                             <td>p<sup>2</sup></td>
                                             <td>2pq(1 - 1/2s)</td>
                                             <td>q<sup>2</sup> (1 - s)</td>
-                                            <td>1 - qs</td>
+                                            <td>1 - qs   <strong>(W)</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>p<sup>2</sup>/W</td>
+                                            <td>2pq(1 - 1/2s)/W</td>
+                                            <td>q<sup>2</sup> (1 - s)/W</td>
+                                            <td>1</td>
                                         </tr>
                                         
                                     </table>

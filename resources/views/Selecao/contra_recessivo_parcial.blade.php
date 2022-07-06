@@ -119,6 +119,13 @@
                                             <td>q<sup>2</sup>(1 - s)</td>
                                             <td>1-sp<sup>2</sup></td>
                                         </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>p<sup>2</sup>/W</td>
+                                            <td>2pq/W</td>
+                                            <td>q<sup>2</sup>(1 - s)/W</td>
+                                            <td>1</td>
+                                        </tr>
                                         
                                     </table>
                                 </div>

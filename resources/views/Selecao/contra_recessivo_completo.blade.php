@@ -119,7 +119,14 @@
                                             <td>p<sup>2</sup></td>
                                             <td>2pq</td>
                                             <td>0</td>
-                                            <td>1-q<sup>2</sup></td>
+                                            <td>1-q<sup>2</sup>   <strong>(W)</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>p<sup>2</sup>/W</td>
+                                            <td>2pq/W</td>
+                                            <td>0</td>
+                                            <td>1</td>
                                         </tr>
                                         
                                     </table>
