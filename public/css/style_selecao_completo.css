@@ -1,6 +1,10 @@
 .btnStyle{
     border:groove 1px;
     border-color: royalblue;
-    height: 50px;
+    height: auto;
     font-size: 20px;
+    margin-top:12px;
 }
+
+
+

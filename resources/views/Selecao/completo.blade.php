@@ -39,21 +39,21 @@
                 @endif
                 <div class="card-body">
                     <div class='row'> 
-                        <div class=" col-md-2" style="" >
+                        <div class=" col-md-2">
                             <a href="{{ URL::to('/selecao/completa/contra-dominante') }}"  class="btn bg-gradient-primary btnStyle"> Contra Alelo Dominante</a>  
                         </div>
-                        <div class=" col-md-3"  style=" " >
+                        <div class=" col-md-3" >
                             <a href="{{ URL::to('/selecao/completa/contra-recessivo-parcial') }}"  class="btn bg-gradient-primary btnStyle"> Contra Alelo Recessivo (Parcial)</a> 
                         </div>
-                        <div class=" col-md-3"  style=" " >
+                        <div class=" col-md-3">
                             <a href="{{ URL::to('/selecao/completa/contra-recessivo-completo') }}"  class="btn bg-gradient-primary btnStyle"> Contra Alelo Recessivo (Completo)</a> 
                         </div>
 
-                        <div class=" col-md-2"  >
+                        <div class=" col-md-2">
                             <a href="{{ URL::to('/selecao/completa/contra-heterozigoto') }}"  class="btn bg-gradient-primary btnStyle"> Contra o Heterozigoto</a> 
                         </div>
 
-                        <div class=" col-md-2"  >
+                        <div class=" col-md-2">
                             <a href="{{ URL::to('/selecao/completa/contra-homozigoto') }}"  class="btn bg-gradient-primary btnStyle"> Contra o Homozigoto</a> 
                         </div>
                         
@@ -68,10 +68,5 @@
 </section 
 @endsection 
 @section('scripts_adicionais') 
-<!-- <script>
-    $(document).on('click','.btnContraDominante', function(){
-        base_url = window.location.origin;
-        window.location.assign(base_url+"/selecao/completa/contraDominante");
-    });
-</script> -->
+
 @endsection

@@ -24,8 +24,7 @@ $(document).on('click','.btnCalcular', function(){
         if(valorTotal==1){
     
             var valorAdaptativo = 1-s;
-            var w = 2*p*q*(1-1/(2*s))
-            console.log(w,p,q,s);
+            var w = 1-q*s;
             valores = document.getElementById("valores").innerHTML;
             $('#valores').empty();
             $('#resultado').append(
@@ -49,22 +48,22 @@ $(document).on('click','.btnCalcular', function(){
                                     '</tr>'+
                                     '<tr>'+
                                         '<td>Valor Adaptativo</td>'+
-                                        '<td> x = 1 - s</td>'+
-                                        '<td> y = 1 - s</td>'+
-                                        '<td> z = 1</td>'+
-                                        '<td></td>'+
+                                        '<td> x = 1 </td>'+
+                                        '<td> y = 1 - 1/2s</td>'+
+                                        '<td> z = 1 - s</td>'+
+                                        '<td></td>'+ 
                                     '</tr>'+
                                     '<tr>'+
                                         '<td>Frequência DEPOIS da Seleção</td>'+
                                         '<td>'+(p*p).toFixed(3)+'</td>'+
-                                        '<td>'+(2*p*q*(1-1/(2*s))).toFixed(3)+'</td>'+
+                                        '<td>'+((2*p*q*(1-(1/2)*s))).toFixed(3)+'</td>'+
                                         '<td>'+(q*q*valorAdaptativo).toFixed(3)+'</td>'+
                                         '<td>'+(1-q*s).toFixed(3)+'</td>'+
                                     '</tr>'+
                                     '<tr>'+
                                         '<td></td>'+
                                         '<td>'+((p*p)/w).toFixed(3)+'</td>'+
-                                        '<td>'+((2*p*q*(1-1/(2*s)))/w).toFixed(3)+'</td>'+
+                                        '<td>'+(((2*p*q*(1-(1/2)*s)))/w).toFixed(3)+'</td>'+
                                         '<td>'+((q*q*valorAdaptativo)/w).toFixed(3)+'</td>'+
                                         '<td>1</td>'+
                                     '</tr>'+
@@ -106,7 +105,6 @@ $(document).on('click','.btnLimpar', function(){
 });
 
 function verificacao(){
-    
     //expressão regular pra testar se no valor do input está no padrão de "0.999"
     if(/\d\.\d{3}/.test(this.value)){
         $('.callout3').find('p').text(""); //limpa a div para erros successivos

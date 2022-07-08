@@ -115,15 +115,15 @@
                                         <tr>
                                             <td>Frequência DEPOIS da Seleção</td>
                                             <td>p<sup>2</sup></td>
-                                            <td>2pq(1 - 1/2s)</td>
-                                            <td>q<sup>2</sup> (1 - s)</td>
+                                            <td>2pqy</td>
+                                            <td>q<sup>2</sup>z</td>
                                             <td>1 - qs   <strong>(W)</strong></td>
                                         </tr>
                                         <tr>
                                             <td></td>
                                             <td>p<sup>2</sup>/W</td>
-                                            <td>2pq(1 - 1/2s)/W</td>
-                                            <td>q<sup>2</sup> (1 - s)/W</td>
+                                            <td>2pqy/W</td>
+                                            <td>q<sup>2</sup>z/W</td>
                                             <td>1</td>
                                         </tr>
                                         
