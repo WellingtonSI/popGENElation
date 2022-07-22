@@ -30,6 +30,14 @@ Route::group(['prefix' => 'equilibrio'], function () {
 });
 Route::get('sexo/atualizar-mapa', ['uses' => 'SexoController@atualizar_mapa']);
 
+Route::group(['prefix' => 'mutacao'], function () {
+    Route::get('/recorrente', ['uses'=> 'MutacaoController@recorrente']);
+    Route::get('/recorrente/calc','MutacaoController@q_variado');
+    Route::get('/recorrente/calc2','MutacaoController@quantidade_geracoes');
+    Route::get('/nao-recorrente','MutacaoController@nao_recorrente');
+    Route::get('/nao-recorrente/perda-alelos/{geracao}','MutacaoController@perda_alelos');
+});
+
 Route::group(['prefix' => 'selecao'], function () {
     Route::get('/completa', ['uses' => 'SelecaoController@completo']);
     Route::get('/completa/contra-dominante', ['uses' => 'SelecaoController@contra_dominante']);

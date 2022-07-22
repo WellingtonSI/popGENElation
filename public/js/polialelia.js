@@ -25,8 +25,6 @@ $(document).ready(function($) {
         $('.btn')[0].style.display="none";
         $('.btn')[1].style.display="block";
 
-        console.log($('.btn'));
-
         //apresentar todos os resultados até o momento 
         function apresentacao(resultdo,index) {
             
@@ -139,7 +137,6 @@ $(document).ready(function($) {
          var alelos = parseFloat((document.querySelector("#alelos")).value);
          
          var total = ((alelos*(alelos+1))/2);
-        //  console.log(alelos+1);
          var numero_heterozigotos = ((alelos*(alelos-1))/2);
          var porcentagem_homozigoto  = (alelos/total)*100;
          var porcentagem_heterozigotos  = (numero_heterozigotos/total)*100;

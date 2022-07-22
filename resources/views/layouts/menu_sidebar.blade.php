@@ -111,6 +111,32 @@
                 </li>
               </ul>
           </li>
+          <li class="nav-item" >
+            <a href="#" class="nav-link destaque estilo-icon">
+            &nbsp;&nbsp;<i class="fas fa-project-diagram"></i>
+                <span class="texto-estilo">
+                &nbsp;<p>Mutação</p>
+                </span>
+            </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="/mutacao/recorrente" class="nav-link destaque">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-wave-square"></i>
+                      <span class="texto-estilo">
+                      &nbsp;Recorrente
+                      </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/mutacao/nao-recorrente" class="nav-link destaque">
+                  &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-slash"></i>
+                      <span class="texto-estilo">
+                      &nbsp;&nbsp;&nbsp;Não Recorrente
+                      </span>
+                  </a>
+                </li>
+              </ul>
+          </li>
           <!-- <li class="nav-item">
             <a href="/selecao" class="nav-link destaque">
             <i class="nav-icon fas fa-sitemap"></i>
