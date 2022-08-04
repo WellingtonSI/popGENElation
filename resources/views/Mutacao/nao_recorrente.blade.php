@@ -82,7 +82,7 @@
 </section 
 @endsection 
 @section('scripts_adicionais') 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('plugins/inputmask/jquery.inputmask.min.js') }}"></script>
 <script src="{{ asset('js/soma.js') }}"></script>
 <script src="{{ asset('js/mutacao_nao_recorrente.js') }}"></script>

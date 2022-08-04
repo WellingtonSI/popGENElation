@@ -71,24 +71,7 @@
                                     <div  id="frequencias">
 
                                     </div>
-                                    <!-- <div class="form-group col-md-6">
-                                        <strong>frequência do alelo dominante (p)<span style="color: red;">*</span></strong>
-                                        <input type="text" autocomplete="off" max="1" min="0" name="p" id="p" class="form-control @error('p') is-invalid @enderror" value="{{ old('p') }}">
-                                        @error('p')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong  id='p-erro'>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <strong>frequência do alelo recessivo (q)<span style="color: red;">*</span></strong>
-                                        <input type="text" autocomplete="off" max="1" min="0" name="q" id="q" class="form-control @error('q') is-invalid @enderror" value="{{ old('q') }}">
-                                        @error('q')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong  id='q-erro'>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div> -->
+                                    
                                     <hr>
                                     <button type="submit" class="btn btn-info float-right col-md-sm-3 col-3 btnCalcular" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>
                                         &nbsp Aguarde...">Calcular</button>
@@ -116,7 +99,7 @@
 </section 
 @endsection 
 @section('scripts_adicionais') 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('plugins/maskedinput/jquery.maskedinput.min.js') }}"></script>
 <script src="{{ asset('js/poliploidia.js') }}"></script>
 @endsection

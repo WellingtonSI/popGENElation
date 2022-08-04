@@ -17,7 +17,7 @@ $(document).on('click','.btnCalcular', function(){
     // var s = document.querySelector('#conficiente').value;
 
     // if(s==='0.000'){
-    //     swal("Atenção!", "O Coeficiente de Seleção (S) deve ser diferente de 0")
+    //     swal.fire("Atenção!", "O Coeficiente de Seleção (S) deve ser diferente de 0")
     // }else {
         var valorTotal=round(p,q);
 
@@ -78,9 +78,9 @@ $(document).on('click','.btnCalcular', function(){
                         
         }else{
             if(valorTotal>1)
-                swal("Atenção!", "As somas das frequências (p+q+r+...+z) está maior que 1", "error");
+                swal.fire("Atenção!", "As somas das frequências (p+q+r+...+z) está maior que 1", "error");
             else
-                swal("Atenção!", "As somas das frequências (p+q+r+...+z) está menor que 1", "error");
+                swal.fire("Atenção!", "As somas das frequências (p+q+r+...+z) está menor que 1", "error");
         }
     // }
 

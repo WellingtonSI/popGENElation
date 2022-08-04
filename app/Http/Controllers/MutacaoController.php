@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 class MutacaoController extends Controller
 {
     public function recorrente(){
-        return view('Mutacao.recorrente');
+        return view('Mutacao.menu');
+    }
+    public function taxa(){
+        return view('Mutacao.recorrente_taxa');
+    }
+    public function geracao(){
+        return view('Mutacao.recorrente_geracao');
     }
     public function q_variado(Request $request)
     {
@@ -15,7 +21,6 @@ class MutacaoController extends Controller
     }
     public function quantidade_geracoes(Request $request)
     {
-        
         return  (1/($request->u+$request->v))*(log(($request->q0 - $request->q)/($request->qn - $request->q)));
     }
     public function nao_recorrente(){

@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1> Dominância Completa</h1>
+                <h1> Mutação Recorrente</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -39,24 +39,12 @@
                 @endif
                 <div class="card-body">
                     <div class='row'> 
-                        <div class=" col-md-2">
-                            <a href="{{ URL::to('/selecao/completa/contra-dominante') }}"  class="btn bg-gradient-primary btnStyle"> Contra Alelo Dominante</a>  
-                        </div>
-                        <div class=" col-md-3" >
-                            <a href="{{ URL::to('/selecao/completa/contra-recessivo-parcial') }}"  class="btn bg-gradient-primary btnStyle"> Contra Alelo Recessivo (Parcial)</a> 
+                        <div class=" col-md-3">
+                            <a href="{{ URL::to('/mutacao/recorrente/taxa') }}"  class="btn bg-gradient-primary btnStyle">Taxa de Mudança da Frequência</a>  
                         </div>
                         <div class=" col-md-3">
-                            <a href="{{ URL::to('/selecao/completa/contra-recessivo-completo') }}"  class="btn bg-gradient-primary btnStyle"> Contra Alelo Recessivo (Completo)</a> 
+                            <a href="{{ URL::to('/mutacao/recorrente/geracao') }}"  class="btn bg-gradient-primary btnStyle">Número de Geração Requerida</a> 
                         </div>
-
-                        <div class=" col-md-2">
-                            <a href="{{ URL::to('/selecao/completa/contra-heterozigoto') }}"  class="btn bg-gradient-primary btnStyle"> Contra o Heterozigoto</a> 
-                        </div>
-
-                        <div class=" col-md-2">
-                            <a href="{{ URL::to('/selecao/completa/contra-homozigoto') }}"  class="btn bg-gradient-primary btnStyle"> Contra o Homozigoto</a> 
-                        </div>
-                        
                     </div>
                 </div>   
                 <!-- /.card-body -->   

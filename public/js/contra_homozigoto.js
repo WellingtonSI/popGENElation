@@ -21,10 +21,10 @@ $(document).on('click','.btnCalcular', function(){
     var s2 = document.querySelector('#s2').value;
 
     if(s1>'1.000'){
-        swal("Atenção!", "O Coeficiente de Seleção de alelo 'A' deve ser menor que 1")
+        swal.fire("Atenção!", "O Coeficiente de Seleção de alelo 'A' deve ser menor que 1")
     }
     else if(s2==='1.000'){
-        swal("Atenção!", "O Coeficiente de Seleção de alelo 'a' deve ser menor que 1")
+        swal.fire("Atenção!", "O Coeficiente de Seleção de alelo 'a' deve ser menor que 1")
     }
     else {
             var valorTotal=round(p,q);
@@ -87,9 +87,9 @@ $(document).on('click','.btnCalcular', function(){
                         
         }else{
             if(valorTotal>1)
-                swal("Atenção!", "As somas das frequências (p+q+r+...+z) está maior que 1", "error");
+                swal.fire("Atenção!", "As somas das frequências (p+q+r+...+z) está maior que 1", "error");
             else
-                swal("Atenção!", "As somas das frequências (p+q+r+...+z) está menor que 1", "error");
+                swal.fire("Atenção!", "As somas das frequências (p+q+r+...+z) está menor que 1", "error");
         }
     }
 

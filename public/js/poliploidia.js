@@ -20,7 +20,7 @@ $(document).ready(function($) {
 
             
         }else{
-            swal("Atenção!", "Selecione a quantidade de alelos","error");
+            swal.fire("Atenção!", "Selecione a quantidade de alelos","error");
         }
 
 
@@ -58,8 +58,9 @@ $(document).ready(function($) {
         var valorTotal='';
         // var quantidadeAlelos = parseInt($("#frequencias .frequencia").length);
         var n = parseInt(document.querySelector('#grau').value);
-        if(n==0){
-            swal("Atenção!", "Selecione o campo Grau de Ploidia (N)","error")
+
+        if(isNaN(n)){
+            swal.fire("Atenção!", "Selecione o campo Grau de Ploidia (N)","error")
         }else {
             for(var i=0;i<n;i++){
                 valorTotal=round(valorTotal,document.getElementById(Alelos[i]).value);
@@ -83,7 +84,7 @@ $(document).ready(function($) {
                 resultado+='</br>';
                 $('#resultado').append(resultado);
             }else{
-                swal("Atenção!", "As somas das frequências (p+q+r+...+z) está menor ou maior que 1", "error");
+                swal.fire("Atenção!", "As somas das frequências (p+q+r+...+z) está menor ou maior que 1", "error");
             }
         }
 

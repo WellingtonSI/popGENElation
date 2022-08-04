@@ -143,7 +143,7 @@
 </section 
 @endsection 
 @section('scripts_adicionais') 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="{{ asset('plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('plugins/maskedinput/jquery.maskedinput.min.js') }}"></script>
 <script src="{{ asset('js/soma.js') }}"></script>
 <script src="{{ asset('js/contra_recessivo_completo.js') }}"></script>

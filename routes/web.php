@@ -32,6 +32,8 @@ Route::get('sexo/atualizar-mapa', ['uses' => 'SexoController@atualizar_mapa']);
 
 Route::group(['prefix' => 'mutacao'], function () {
     Route::get('/recorrente', ['uses'=> 'MutacaoController@recorrente']);
+    Route::get('/recorrente/taxa','MutacaoController@taxa');
+    Route::get('/recorrente/geracao','MutacaoController@geracao');
     Route::get('/recorrente/calc','MutacaoController@q_variado');
     Route::get('/recorrente/calc2','MutacaoController@quantidade_geracoes');
     Route::get('/nao-recorrente','MutacaoController@nao_recorrente');
