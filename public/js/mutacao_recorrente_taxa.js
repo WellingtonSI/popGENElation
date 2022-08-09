@@ -42,12 +42,20 @@ $(document).on('click','.btnCalcular', function(){
                 success: function($data) {
 
                     if($data.split('E')[1]){
+                        $('#p').val("");
+                        $('#q').val("");
+                        $('#u').val("");
+                        $('#v').val("");
                         $('#resultado').empty();
                         var split =  $data.split('E');
                         var resultado = split[0]+"x10"+"<sup>"+split[1]+"</sup>";
                         $('#resultado').append("</br><h5>Taxa de Mudança da Freqüência de “a“</h5><strong><span  style='font-size:20px'>"+resultado+"</span></strong>");
                     }else{
                         if($data!=0){
+                            $('#p').val("");
+                            $('#q').val("");
+                            $('#u').val("");
+                            $('#v').val("");
                             $('#resultado').empty();
                             //pegar o valor depois do ponto para saber qual será ordem de grandeza 
                             var depoisDoPonto = $data.split('.')[1];

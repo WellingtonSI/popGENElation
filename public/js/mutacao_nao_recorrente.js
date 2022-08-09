@@ -11,6 +11,7 @@ $(document).on('click','.btnCalcular', function(){
             url:  window.location.origin+"/mutacao/nao-recorrente/perda-alelos/"+geracao,
             success: function($data) {
                 $('#resultado').empty();
+                $('#geracao').val("");
                 $('#resultado').append("</br><h5>Perdas na geração "+geracao+"º</h5><strong><span  style='font-size:20px'>"+$data+"</span></strong>");
             },
             error: function(error) {

@@ -44,6 +44,11 @@ $(document).on('click','.btnCalcularGeracoes', function(){
                     'qn':qn
                 },
                 success: function($data) {
+                    $('#q0').val("");
+                    $('#qn').val("");
+                    $('#q1').val("");
+                    $('#u1').val("");
+                    $('#v1').val("");
                     $('#resultado_geracoes').append("</br><h5>Quantidade de gerações</h5><strong><span  style='font-size:20px'>"+ Math.round($data)+"</span></strong>");
                 },
                 error: function(error) {

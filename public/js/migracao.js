@@ -35,6 +35,11 @@ $(document).on('click','.btnCalcular', function(){
                     'nm':nm
                 },
                 success: function($data) {
+                    $('#popx').val("");
+                    $('#popy').val("");
+                    $('#q0').val("");
+                    $('#qm').val("");
+                    $('#nm').val("");
                     $('#resultado').empty();
                     $('#resultado').append("</br><h5>Frequência na População Mista</h5><strong><span  style='font-size:20px'>"+ Number($data).toFixed(3)+"</span></strong>");
                 },
