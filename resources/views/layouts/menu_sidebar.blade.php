@@ -137,14 +137,14 @@
                 </li>
               </ul>
           </li>
-          <!-- <li class="nav-item">
-            <a href="/selecao" class="nav-link destaque">
-            <i class="nav-icon fas fa-sitemap"></i>
+          <li class="nav-item">
+            <a href="/migracao" class="nav-link destaque">
+            &nbsp;&nbsp;<i class="fas fa-exchange-alt"></i>
               <span class="texto-estilo"> 
-                <p>Seleção Gamética</p>
+              &nbsp;&nbsp;<p>Migração</p>
               </span>
             </a>
-          </li> -->
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

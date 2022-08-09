@@ -40,6 +40,8 @@ Route::group(['prefix' => 'mutacao'], function () {
     Route::get('/nao-recorrente/perda-alelos/{geracao}','MutacaoController@perda_alelos');
 });
 
+Route::get('migracao/calc', ['uses' => 'MigracaoController@calc']);
+
 Route::group(['prefix' => 'selecao'], function () {
     Route::get('/completa', ['uses' => 'SelecaoController@completo']);
     Route::get('/completa/contra-dominante', ['uses' => 'SelecaoController@contra_dominante']);
@@ -55,6 +57,7 @@ Route::resource('sexo', 'SexoController');
 Route::resource('polialelia', 'PolialeliaController');
 Route::resource('poliploidia', 'PoliploidiaController');
 Route::resource('selecao', 'SelecaoController');
+Route::resource('migracao ', 'MigracaoController');
 
 
 
