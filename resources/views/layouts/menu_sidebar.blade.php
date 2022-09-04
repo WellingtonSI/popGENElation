@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="nav-item" >
-            <a href="#" class="nav-link destaque estilo-icon">
+            <a href="/equilibrio/por-geracao" class="nav-link destaque estilo-icon">
                 <i class="nav-icon fas fa-balance-scale "></i>
                 <span class="texto-estilo">
                   <p>Equilíbrio de</p>
@@ -44,7 +44,7 @@
                   <p>Hardy-Weinberg</p>
                 </span>
             </a>
-              <ul class="nav nav-treeview">
+              <!-- <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="/equilibrio/por-geracao" class="nav-link destaque">
                   &nbsp;&nbsp;&nbsp;<i class="nav-icon fas fa-leaf"></i>
@@ -61,7 +61,7 @@
                       </span>
                   </a>
                 </li>
-              </ul>
+              </ul> -->
           </li>
           <li class="nav-item">
             <a href="/sexo" class="nav-link destaque">
